@@ -1,30 +1,22 @@
-This is the REAdme so read it 
+UPDATE!!!!
 
-Working on the back end cyurrently. 
-should be on the Main branch soon or atleast the test branch.
+Maler lite functionality added and tested with my email
+can change the looks of it but atleast its in the right place
 
-TO DO
-       Trim the branches  
-       Find where the code saves the emails
-       Make it create a email list
+Added a scroll to top bar. 
+not sure if you want it stuck to the bottem of the page
+or to scroll with screen??? 
+let me know pls.
 
-WHAT GRAY NEEDS TO DO!!!!!!!! 
-    
-    Save PURA LANDING GRABBY EMAIL.HTML to your desktop 
-    Then right click open with. 
-    Pick your browser of choice and
-    It should open a window with the first build 
-    You can even type in an email into the email box. 
-    
-For some reason it changed the shape a little but that can be fixed later
+Need to descuss Fonts cus i can change them now.
+And we can sort colors aswell i used the brand collers 
+form youe email to me 
+but i just used them as place holders 
+so i could see what i was eddidting in the code
+but easy to change whenever 
 
-Don't know where it saves the email list yet I'm working on that. 
-
-trying to figure out the branch system i think iv got it its just implementing it is confusining.
-
-Also trying to figure out the full stack needed 
-think were go na usae the right email API one you suggested.
-  
-
-
-    
+Miler lite has some good tools 
+Appparently for email news lwetters and stuff 
+we might wanna look at that 
+well you might cus icant log in cus i need a 
+code from your email lol.
