@@ -1,5 +1,9 @@
 UPDATE!!!!
 
+<(((GRAY download the MK2 file to your laptop then open.
+type your email in and then give it a sec and you should get
+a confermation email.)))>
+
 Maler lite functionality added and tested with my email
 can change the looks of it but atleast its in the right place
 
