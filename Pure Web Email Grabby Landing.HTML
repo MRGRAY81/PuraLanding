@@ -16,7 +16,7 @@
     </form>
   </div>
   <div style="width: 88px; height: 24px; left: 1035px; top: 0px; position: absolute"></div>
-  <div style="width: 510px; height: 58px; left: 825px; top: 813px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #D0D0D0; font-size: 48px; font-family: Inter; font-weight: 400; letter-spacing: 6.24px; word-wrap: break-word">COMING SOON!</div>
+  <div style="width: 510px; height: 58px; left: 825px; top: 813px; position: absolute; text-align: center; justify-content: center, display: flex; flex-direction: column; color: #D0D0D0; font-size: 48px; font-family: Inter; font-weight: 400; letter-spacing: 6.24px; word-wrap: break-word">COMING SOON!</div>
   <div style="left: 892px; top: 915px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 64px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word; text-shadow: 0px 3px 0px rgba(0, 0, 0, 1.00)">Why We Exist</div>
   <div style="left: 557px; top: 1030px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 40px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word">The music industry can be challenging for independent artist<br/>and communities undeservedly.<br/>PuraTunes is here to empower artists and enrich<br/>global communities.</div>
   <div style="left: 912px; top: 1297px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 64px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">Our Mission</div>
@@ -24,23 +24,8 @@
   <div style="left: 726px; top: 1631px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 64px; font-family: Inria Sans; font-weight: 700; word-wrap: break-word">A Platform for Everybody</div>
   <div style="width: 1088px; height: 134px; left: 536px; top: 1746px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 36px; font-family: Inter; font-weight: 400; word-wrap: break-word">PuraTunes is commited to supporting artists and advancing social justice. Over time, we hope to build a fairer and more generative ecosystem for all</div>
 </div>
-<!-- Replace the lower card's Email Address with an interactive form -->
-<div style="width: 438px; height: 215px; position: relative; overflow: hidden; border-radius: 5px; border: 1px #8A38F5 solid">
-  <form id="card-email-form" style="position: absolute; left: 20px; top: 22px; width: 398px; height: 59px; background: #39394A; border-radius: 12px; outline: 2px #4D4A5B solid; display: flex; align-items: center; gap: 10px; padding: 0 20px; z-index:2;"
-    onsubmit="event.preventDefault();">
-    <label for="card-email-input" style="color: rgba(255,255,255,0.50); font-size: 24px; font-family: Inria Sans; font-weight: 400; margin-right: 10px;">Email</label>
-    <input id="card-email-input" type="email" placeholder="Enter your email" required
-      style="font-size: 20px; font-family: Inria Sans; padding: 6px 12px; border-radius: 8px; border: none; outline: none; width: 180px;">
-    <button type="submit"
-      style="background: #1DA3F3; color: white; border: none; border-radius: 8px; padding: 6px 14px; font-size: 16px; font-family: Inria Sans; cursor: pointer;">
-      Notify Me
-    </button>
-  </form>
-  <div style="width: 398px; height: 59px; left: 25px; top: 136px; position: absolute; background: #39394A; border-radius: 12px; outline: 2px white solid"></div>
-  <div style="width: 97px; height: 19px; left: 25px; top: 108px; position: absolute">
-    <div style="left: 0px; top: 0px; position: absolute; color: rgba(255, 255, 255, 0.50); font-size: 16px; font-family: Inria Sans; font-weight: 400; word-wrap: break-word">Email Addfress</div>
-  </div>
-</div>
+
+
 <script>
 // Store emails in localStorage under 'pura_emails'
 function storeEmail(email) {
@@ -73,3 +58,12 @@ document.getElementById('card-email-form').addEventListener('submit', function(e
   }
 });
 </script>
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1692076');
+</script>
+<!-- End MailerLite Universal -->
