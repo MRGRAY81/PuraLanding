@@ -13,49 +13,39 @@
       color: #f3f3f3;
     }
     .top-section {
-      min-height: 100vh;
+      min-height: 90vh;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
-      padding: 0 20px 40px 20px;
+      padding: 0 20px 30px 20px;
       background: none;
     }
-    .logo-wrapper, .about-logo-wrapper {
-      border-radius: 24px;
-      padding: 20px;
+    .logo-wrapper {
+      margin-top: 36px;
+      margin-bottom: 14px;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 30px;
-      margin-top: 50px;
-      background: none;
     }
     .logo-img {
-      width: 440px;
-      max-width: 90vw;
+      width: 300px;
+      max-width: 60vw;
       display: block;
-    }
-    .about-logo-img {
-      width: 390px;
-      max-width: 80vw;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
     }
     .main-title {
       font-size: 2.3rem;
       font-weight: 700;
       color: #fff;
       text-align: center;
-      margin: 0 0 25px 0;
+      margin: 0 0 18px 0;
       line-height: 1.15;
       letter-spacing: 0.02em;
     }
     .main-desc {
       font-size: 1.15rem;
       text-align: center;
-      margin-bottom: 36px;
+      margin-bottom: 22px;
       color: #f3f3f3;
       font-weight: 400;
       line-height: 1.35;
@@ -67,109 +57,31 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 120px;
-      margin-bottom: 30px;
+      min-height: 80px;
+      margin-bottom: 16px;
       width: 100%;
-      max-width: 420px;
+      max-width: 400px;
       margin-left: auto;
       margin-right: auto;
-      background: rgba(30, 25, 70, 0.44);
+      background: rgba(30, 25, 70, 0.24);
       border-radius: 10px;
-      padding: 16px 8px;
+      padding: 12px 8px;
     }
     .coming-soon {
       font-size: 2rem;
       font-weight: 700;
-      margin-top: 28px;
+      margin-top: 18px;
       color: #fff;
       letter-spacing: 1px;
       text-align: center;
     }
-    .about-section {
-      width: 100%;
-      padding: 60px 0 60px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: none;
-    }
-    .about-content {
-      max-width: 520px;
-      width: 100%;
-      padding: 0 20px;
-    }
-    .about-logo-wrapper {
-      margin-bottom: 28px;
-      margin-top: 0;
-      background: none;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .about-title {
-      font-size: 2.1rem;
-      font-weight: 700;
-      margin-bottom: 30px;
-      text-align: center;
-      color: #fff;
-    }
-    .about-box {
-      background: rgba(30, 25, 70, 0.88);
-      border-radius: 20px;
-      border: 1px solid #2b2169;
-      padding: 32px 24px 24px 24px;
-    }
-    .about-section-block {
-      margin-bottom: 26px;
-    }
-    .about-section-block:last-child {
-      margin-bottom: 0;
-    }
-    .about-icon {
-      font-size: 2rem;
-      vertical-align: middle;
-      margin-right: 14px;
-      color: #fff;
-    }
-    .about-heading {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-    }
-    .about-desc {
-      font-size: 1rem;
-      margin-left: 2.6rem;
-      margin-bottom: 0;
-      color: #f3f3f3;
-    }
-    .about-list {
-      margin-left: 2.6rem;
-      color: #f3f3f3;
-      font-size: 1rem;
-      margin-bottom: 0;
-    }
-    .mission-list {
-      padding-left: 1.2em;
-      margin: 0.4em 0 0.6em 0;
-    }
-    .platform-desc {
-      font-size: 1rem;
-      margin-left: 2.6rem;
-      margin-bottom: 0;
-      color: #f3f3f3;
-    }
     @media (max-width: 600px) {
       .main-title { font-size: 1.4rem; }
-      .about-logo-img, .logo-img { width: 80vw; }
-      .about-title { font-size: 1.3rem; }
-      .about-content { padding: 0 6vw; }
-      .about-section { padding: 40px 0 40px 0; }
+      .logo-img { width: 60vw; }
+      .main-desc { font-size: 1rem; }
+      .logo-wrapper { margin-top: 18px; }
+      .ml-embedded { min-height: 60px; padding: 8px 2px; }
       .coming-soon { font-size: 1.2rem; }
-      .about-box { padding: 18px 8px 14px 8px; }
-      .logo-wrapper, .about-logo-wrapper { padding: 10px; }
-      .ml-embedded { padding: 8px 2px; min-height: 80px;}
     }
   </style>
 </head>
@@ -187,45 +99,6 @@
     <div class="ml-embedded" data-form="vUDs1X"></div>
     <script src="https://assets.mailerlite.com/js/universal.js"></script>
     <div class="coming-soon">Coming Soon</div>
-  </section>
-  <section class="about-section">
-    <div class="about-content">
-      <div class="about-logo-wrapper">
-        <img src="logo.png" alt="PuraTunes Logo" class="about-logo-img">
-      </div>
-      <div class="about-title">About PuraTunes</div>
-      <div class="about-box">
-        <div class="about-section-block">
-          <div class="about-heading">
-            <span class="about-icon">🎧</span>
-            Why We Exist
-          </div>
-          <p class="about-desc">
-            The music industry can be challenging for independent artists. And communities are underserved. PuraTunes is here to empower artists and enrich global communities.
-          </p>
-        </div>
-        <div class="about-section-block">
-          <div class="about-heading">
-            <span class="about-icon">👤</span>
-            Our Mission
-          </div>
-          <ul class="mission-list about-list">
-            <li>Enable artists to livestream their music across the world</li>
-            <li>Facilitate creative tools for music-makers</li>
-            <li>Grow a thriving, inclusive community</li>
-          </ul>
-        </div>
-        <div class="about-section-block">
-          <div class="about-heading">
-            <span class="about-icon">🤝</span>
-            A Platform for Everybody
-          </div>
-          <p class="platform-desc">
-            PuraTunes is committed to supporting artists and advancing social justice. Over time, we hope to build a fairer and more generative ecosystem for all.
-          </p>
-        </div>
-      </div>
-    </div>
   </section>
 </body>
 </html>
