@@ -15,7 +15,6 @@
       min-height: 100vh;
       overflow-x: hidden;
     }
-    /* Subtle waves background SVG */
     body::before {
       content: "";
       position: absolute;
@@ -54,45 +53,67 @@
       line-height: 1.36;
       color: #f3f3f3;
     }
-    .email-form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 22px;
-      margin-top: 0;
+    .ml-form-embedContainer {
+      margin: 0 auto 22px auto;
+      padding: 18px 10px 10px 10px;
+      max-width: 370px;
+      background: rgba(30,25,70,0.22);
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.09);
+      position: relative;
+      z-index: 2;
     }
-    .email-form input[type="email"] {
-      font-family: inherit;
+    .ml-form-embedContent h4 {
+      margin-bottom: 4px;
       font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      color: #fff !important;
+      font-family: 'Montserrat', Arial, sans-serif !important;
+      text-align: center;
+    }
+    .ml-form-embedContent p {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: #fff !important;
+      font-family: 'Montserrat', Arial, sans-serif !important;
+      text-align: center;
+    }
+    .ml-form-fieldRow input[type="email"] {
+      width: 100%;
       padding: 12px 18px;
+      font-size: 1.15rem;
       border-radius: 8px;
       border: 2px solid #4a90e2;
       background: transparent;
       color: #fff;
-      width: 260px;
       outline: none;
+      margin-bottom: 8px;
+      font-family: 'Montserrat', Arial, sans-serif;
       transition: border .2s;
     }
-    .email-form input[type="email"]:focus {
+    .ml-form-fieldRow input[type="email"]:focus {
       border-color: #a02dff;
       background: rgba(255,255,255,0.08);
     }
-    .email-form button {
-      font-family: inherit;
-      font-size: 1.15rem;
-      padding: 12px 28px;
+    .ml-form-embedSubmit button {
+      width: 100%;
+      padding: 12px 0;
       border-radius: 8px;
       border: none;
       background: linear-gradient(90deg, #a02dff 0%, #00c6ff 100%);
       color: #fff;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-weight: 700;
+      font-size: 1.15rem;
       cursor: pointer;
-      transition: box-shadow .2s;
+      margin-top: 4px;
+      transition: box-shadow .2s, background .2s;
       box-shadow: 0 2px 12px 0 rgba(0,0,0,0.08);
     }
-    .email-form button:hover {
+    .ml-form-embedSubmit button:hover {
       box-shadow: 0 4px 18px 0 rgba(160,45,255,0.23);
+      background: linear-gradient(90deg, #00c6ff 0%, #a02dff 100%);
     }
     .coming-soon {
       font-size: 2rem;
@@ -167,8 +188,8 @@
       .about-title { font-size: 1.2rem; }
       .about-heading { font-size: 1.01rem; }
       .about-desc, .about-list { font-size: 0.98rem; }
-      .email-form input, .email-form button { font-size: 1rem; padding: 10px 10px;}
       .container { padding: 20px 6vw 0 6vw; }
+      .ml-form-embedContainer { padding: 10px 2px; }
     }
   </style>
 </head>
@@ -176,15 +197,45 @@
   <div class="container">
     <!-- Top Section -->
     <img src="logo.png" alt="PuraTunes Logo" class="logo">
-    <div class="main-title">The future of music belongs to everybody!</div>
+    <div class="main-title">The Future Of Music Belongs To Everybody!</div>
     <div class="main-desc">
       Empowering independent artists, labels, venues, and studios with advanced technology, real-time, and monetization tools that complement existing platforms.
     </div>
-    <!-- Email Capture Form (replace action with your MailerLite endpoint if desired) -->
-    <form class="email-form" action="#" method="POST">
-      <input type="email" name="email" placeholder="Email address" required>
-      <button type="submit">Notify Me</button>
-    </form>
+
+    <!-- MailerLite Email Capture (Paste your embed code below) -->
+    <div id="mlb2-29646648" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-29646648">
+      <div class="ml-form-align-center ">
+        <div class="ml-form-embedWrapper embedForm">
+          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+            <div class="ml-form-embedContent">
+              <h4>Keep Up To Speed</h4>
+              <p>Drop us your email and we will keep you posted on updates and launch dates.</p>
+            </div>
+            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/1692076/forms/162811952246032083/subscribe" data-code="" method="post" target="_blank">
+              <div class="ml-form-formContent">
+                <div class="ml-form-fieldRow ml-last-item">
+                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                    <input aria-label="email" aria-required="true" type="email" class="form-control" name="fields[email]" placeholder="Email address" autocomplete="email" required>
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" name="ml-submit" value="1">
+              <div class="ml-form-embedSubmit">
+                <button type="submit" class="primary">Subscribe</button>
+              </div>
+              <input type="hidden" name="anticsrf" value="true">
+            </form>
+          </div>
+          <div class="ml-form-successBody row-success" style="display: none">
+            <div class="ml-form-successContent">
+              <h4>Thank you!</h4>
+              <p>You have successfully joined our subscriber list.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="coming-soon">Coming Soon</div>
 
     <!-- About Section -->
@@ -222,5 +273,18 @@
       </div>
     </div>
   </div>
+  
+  <!-- MailerLite Scripts -->
+  <script>
+    function ml_webform_success_29646648() {
+      var $ = ml_jQuery || jQuery;
+      $('.ml-subscribe-form-29646648 .row-success').show();
+      $('.ml-subscribe-form-29646648 .row-form').hide();
+    }
+  </script>
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
+  <script>
+    fetch("https://assets.mailerlite.com/jsonp/1692076/forms/162811952246032083/takel")
+  </script>
 </body>
 </html>
