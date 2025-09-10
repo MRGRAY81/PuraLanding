@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PuraTunes – The Future Of Music</title>
+  <title>PuraTunes – Coming Soon</title>
   <style>
     * {
       margin: 0;
@@ -34,13 +34,13 @@
     }
 
     .hero .logo {
-      width: 180px;
+      width: 200px;
       height: auto;
       margin-bottom: 25px;
     }
 
     .hero h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
       margin-bottom: 20px;
     }
 
@@ -50,20 +50,47 @@
       font-size: 1.2rem;
     }
 
+    .coming-soon {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
+
     /* About */
     .about {
       background: #0c0f5a;
+      text-align: left;
     }
 
     .about h2 {
+      text-align: center;
       font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .about .section-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about h3 {
+      margin-top: 30px;
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .about p, .about ul {
+      font-size: 1.1rem;
       margin-bottom: 20px;
     }
 
-    .about p {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.1rem;
+    .about ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .about ul li {
+      margin-bottom: 10px;
     }
 
     /* Footer */
@@ -90,24 +117,42 @@
   <!-- HERO -->
   <section class="hero" id="hero">
     <img src="logo.png" alt="PuraTunes Logo" class="logo" />
-    <h1>The Future Of Music Belongs To Everybody!</h1>
+    <h1>The future of music belongs to everybody!</h1>
     <p>
       Empowering independent artists, labels, venues, and studios with advanced
-      technology, real-time features, and monetization tools that complement existing platforms.
+      technology, real-time, and monetization tools that complement existing platforms.
     </p>
 
     <!-- MailerLite Embed -->
     <div class="ml-embedded" data-form="vUDs1X"></div>
+
+    <div class="coming-soon">Coming Soon</div>
   </section>
 
   <!-- ABOUT -->
   <section class="about" id="about">
     <h2>About PuraTunes</h2>
-    <p>
-      PuraTunes is building a global stage for music where artists, fans, venues,
-      and studios connect directly. We believe in fair opportunities, creative freedom,
-      and a future where music truly belongs to everybody.
-    </p>
+    <div class="section-content">
+      <h3>🎧 Why We Exist</h3>
+      <p>
+        The music industry can be challenging for independent artists,
+        and communities are underserved. PuraTunes is here to empower
+        artists and enrich global communities.
+      </p>
+
+      <h3>🌍 Our Mission</h3>
+      <ul>
+        <li>Enable artists to livestream their music across the world</li>
+        <li>Facilitate creative tools for music-makers</li>
+        <li>Grow a thriving, inclusive community</li>
+      </ul>
+
+      <h3>🤝 A Platform for Everybody</h3>
+      <p>
+        PuraTunes is committed to supporting artists and advancing social justice.
+        Over time, we hope to build a fairer and more generative ecosystem for all.
+      </p>
+    </div>
   </section>
 
   <!-- FOOTER -->
@@ -120,18 +165,15 @@
     </p>
   </footer>
 
-  <!-- MailerLite Script -->
+  <!-- MailerLite Universal -->
   <script>
-    (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
-    var c={ a:arguments,q:[]};var r=this.push(c);return r};f.q=f.q||[];
-    m[e]=m[e]||function(){ return f.q.push(arguments)};m[e].q=f.q||[];
-    r=a.createElement(i);var _=a.getElementsByTagName(i)[0];
-    r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
-    _.parentNode.insertBefore(r,_);
-    })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
-
-    var ml_account = ml('accounts', 'YOUR-ACCOUNT-ID', 'vUDs1X', 'load');
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);},
+    l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],
+    n.parentNode.insertBefore(l,n);})(window,document,'script',
+    'https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1692076');  /* replace with your MailerLite account ID if needed */
   </script>
+  <!-- End MailerLite Universal -->
 
 </body>
 </html>
