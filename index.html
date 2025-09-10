@@ -8,9 +8,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --main-gradient: radial-gradient(ellipse at 60% 70%, #13306d 0%, #1a184a 60%, #0a0a24 100%);
-      --primary-blue: #1a184a;
-      --accent-purple: #570cb2;
+      --gradient-top: linear-gradient(180deg, #2e117a 0%, #0d1e59 70%);
+      --main-blue: #0d1e59;
+      --about-bg: #0b0b24;
       --logo-gradient: linear-gradient(90deg, #a23afc 0%, #0ec4fc 100%);
       --white: #fff;
       --text: #f3f3f3;
@@ -18,137 +18,75 @@
       --border: #2b2169;
       --button-bg: #3d44fa;
       --button-hover: #570cb2;
+      --icon-bg: transparent;
     }
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
-      background: var(--main-gradient);
+      background: var(--gradient-top);
       color: var(--text);
-      min-height: 100vh;
     }
-    .header {
-      width: 100%;
-      background: transparent;
+    .top-section {
+      min-height: 100vh;
+      background: var(--gradient-top);
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      padding: 40px 0 20px 0;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      justify-content: flex-start;
+      padding: 0 20px 40px 20px;
     }
     .logo-img {
       width: 220px;
       max-width: 60vw;
-      height: auto;
+      margin: 50px auto 30px auto;
       display: block;
     }
-    .main-section {
-      max-width: 480px;
-      margin: 0 auto;
-      padding: 32px 20px 0 20px;
-    }
-    .about-box {
-      background: var(--box-bg);
-      border-radius: 20px;
-      border: 1px solid var(--border);
-      padding: 32px 24px 24px 24px;
-      margin-bottom: 32px;
-    }
-    .about-title {
-      font-size: 2.1rem;
+    .main-title {
+      font-size: 2.3rem;
       font-weight: 700;
-      margin-bottom: 28px;
-      text-align: center;
       color: var(--white);
-    }
-    .about-section {
-      margin-bottom: 28px;
-    }
-    .about-section:last-child {
-      margin-bottom: 0;
-    }
-    .about-icon {
-      font-size: 2rem;
-      vertical-align: middle;
-      margin-right: 14px;
-      color: #fff;
-    }
-    .about-heading {
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-      display: flex;
-      align-items: center;
-    }
-    .about-desc {
-      font-size: 1rem;
-      margin-left: 2.6rem;
-      margin-bottom: 0;
-      color: var(--text);
-    }
-    .about-list {
-      margin-left: 2.6rem;
-      color: var(--text);
-      font-size: 1rem;
-      margin-bottom: 0;
-    }
-    .mission-list {
-      padding-left: 1.2em;
-      margin: 0.4em 0 0.6em 0;
-    }
-    .platform-desc {
-      font-size: 1rem;
-      margin-left: 2.6rem;
-      margin-bottom: 0;
-      color: var(--text);
-    }
-    /* Second Section */
-    .coming-section {
-      background: none;
       text-align: center;
-      margin-bottom: 40px;
+      margin: 0 0 25px 0;
+      line-height: 1.15;
     }
-    .coming-title {
-      font-size: 2rem;
-      font-weight: 700;
-      margin: 36px 0 16px 0;
-      color: var(--white);
-    }
-    .coming-desc {
+    .main-desc {
       font-size: 1.15rem;
-      margin-bottom: 34px;
+      text-align: center;
+      margin-bottom: 36px;
       color: var(--text);
       font-weight: 400;
-      line-height: 1.4;
+      line-height: 1.35;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    /* Email Form Styles */
     .email-form {
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 0;
       margin-bottom: 30px;
-      max-width: 350px;
+      max-width: 420px;
       margin-left: auto;
       margin-right: auto;
     }
     .email-input {
       flex: 1 1 auto;
-      padding: 12px 16px;
-      font-size: 1rem;
-      border-radius: 6px 0 0 6px;
+      padding: 16px 18px;
+      font-size: 1.1rem;
+      border-radius: 8px 0 0 8px;
       border: none;
       outline: none;
-      background: #fff;
-      color: #222;
+      background: #161a3c;
+      color: #fff;
       font-family: inherit;
       margin: 0;
+      border: 2px solid #3538a6;
     }
     .notify-btn {
-      padding: 12px 26px;
-      font-size: 1rem;
-      border-radius: 0 6px 6px 0;
+      padding: 16px 30px;
+      font-size: 1.1rem;
+      border-radius: 0 8px 8px 0;
       border: none;
       background: var(--button-bg);
       color: #fff;
@@ -156,108 +94,16 @@
       cursor: pointer;
       transition: background 0.2s;
       margin-left: -2px;
+      border: 2px solid #3538a6;
+      border-left: none;
     }
     .notify-btn:hover {
       background: var(--button-hover);
     }
     .coming-soon {
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: 700;
-      margin-top: 18px;
+      margin-top: 28px;
       color: var(--white);
       letter-spacing: 1px;
-    }
-    @media (max-width: 600px) {
-      .main-section {
-        max-width: 98vw;
-        padding: 18px 4vw 0 4vw;
-      }
-      .about-box {
-        padding: 20px 8px 18px 8px;
-      }
-      .about-title {
-        font-size: 1.4rem;
-      }
-      .coming-title {
-        font-size: 1.3rem;
-      }
-      .coming-desc {
-        font-size: 1rem;
-      }
-      .logo-img {
-        width: 60vw;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="header">
-    <!-- Use your actual logo image here -->
-    <img src="logo.png" alt="PuraTunes Logo" class="logo-img">
-  </div>
-
-  <div class="main-section">
-    <!-- About Section -->
-    <div class="about-box">
-      <div class="about-title">About PuraTunes</div>
-      <div class="about-section">
-        <div class="about-heading">
-          <span class="about-icon">🎧</span>
-          Why We Exist
-        </div>
-        <p class="about-desc">
-          The music industry can be challenging for independent artists. And communities are underserved. PuraTunes is here to empower artists and enrich global communities.
-        </p>
-      </div>
-      <div class="about-section">
-        <div class="about-heading">
-          <span class="about-icon">👤</span>
-          Our Mission
-        </div>
-        <ul class="mission-list about-list">
-          <li>Enable artists to livestream their music across the world</li>
-          <li>Facilitate creative tools for music-makers</li>
-          <li>Grow a thriving, inclusive community</li>
-        </ul>
-      </div>
-      <div class="about-section">
-        <div class="about-heading">
-          <span class="about-icon">🤝</span>
-          A Platform for Everybody
-        </div>
-        <p class="platform-desc">
-          PuraTunes is committed to supporting artists and advancing social justice. Over time, we hope to build a fairer and more generative ecosystem for all.
-        </p>
-      </div>
-    </div>
-    <!-- Coming Soon Section -->
-    <div class="coming-section">
-      <img src="logo.png" alt="PuraTunes Logo" class="logo-img" style="margin-bottom:10px;">
-      <div class="coming-title">
-        The future of music belongs to everybody!
-      </div>
-      <div class="coming-desc">
-        Empowering independent artists, labels, venues, and studios with advanced technology, real-time, and monetization tools that complement existing platforms.
-      </div>
-      <!-- Email Form (MailerLite placeholder) -->
-      <form class="email-form" action="#" method="POST" id="mailerlite-form">
-        <input type="email" class="email-input" name="email" placeholder="Email address" required>
-        <button class="notify-btn" type="submit">Notify Me</button>
-      </form>
-      <!-- Replace above <form> with your MailerLite embed code for live email capture -->
-      <div class="coming-soon">Coming Soon</div>
-    </div>
-  </div>
-  <!-- Optional JS for local demo only (remove for MailerLite embed) -->
-  <script>
-    // Demo form handler (replace with MailerLite integration)
-    document.getElementById('mailerlite-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const email = this.email.value;
-      alert('Thank you! You\'ll be notified at: ' + email);
-      this.reset();
-    });
-  </script>
-</body>
-</html>
-
+      text-align
