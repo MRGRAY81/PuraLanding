@@ -60,4 +60,212 @@
       margin-left: auto;
       margin-right: auto;
     }
-    /* MailerLite
+    /* MailerLite Form Styles */
+    .ml-form-embed {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+      width: 100%;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .ml-form-embed input[type="email"] {
+      flex: 1 1 auto;
+      padding: 16px 18px;
+      font-size: 1.1rem;
+      border-radius: 8px 0 0 8px;
+      border: 2px solid #3538a6;
+      background: #161a3c;
+      color: #fff;
+      font-family: inherit;
+      outline: none;
+      margin: 0;
+    }
+    .ml-form-embed button[type="submit"] {
+      padding: 16px 30px;
+      font-size: 1.1rem;
+      border-radius: 0 8px 8px 0;
+      border: none;
+      background: var(--button-bg);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-left: -2px;
+      border: 2px solid #3538a6;
+      border-left: none;
+    }
+    .ml-form-embed button[type="submit"]:hover {
+      background: var(--button-hover);
+    }
+    .coming-soon {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 28px;
+      color: var(--white);
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    /* About Section */
+    .about-section {
+      background: var(--about-bg);
+      width: 100%;
+      padding: 60px 0 60px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .about-content {
+      max-width: 520px;
+      width: 100%;
+      padding: 0 20px;
+    }
+    .about-logo-img {
+      width: 195px;
+      max-width: 45vw;
+      margin: 0 auto 28px auto;
+      display: block;
+    }
+    .about-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      text-align: center;
+      color: var(--white);
+    }
+    .about-box {
+      background: var(--box-bg);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      padding: 32px 24px 24px 24px;
+    }
+    .about-section-block {
+      margin-bottom: 26px;
+    }
+    .about-section-block:last-child {
+      margin-bottom: 0;
+    }
+    .about-icon {
+      font-size: 2rem;
+      vertical-align: middle;
+      margin-right: 14px;
+      color: #fff;
+    }
+    .about-heading {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+    }
+    .about-desc {
+      font-size: 1rem;
+      margin-left: 2.6rem;
+      margin-bottom: 0;
+      color: var(--text);
+    }
+    .about-list {
+      margin-left: 2.6rem;
+      color: var(--text);
+      font-size: 1rem;
+      margin-bottom: 0;
+    }
+    .mission-list {
+      padding-left: 1.2em;
+      margin: 0.4em 0 0.6em 0;
+    }
+    .platform-desc {
+      font-size: 1rem;
+      margin-left: 2.6rem;
+      margin-bottom: 0;
+      color: var(--text);
+    }
+    @media (max-width: 600px) {
+      .main-title {
+        font-size: 1.4rem;
+      }
+      .about-logo-img, .logo-img {
+        width: 60vw;
+      }
+      .about-title {
+        font-size: 1.3rem;
+      }
+      .about-content {
+        padding: 0 6vw;
+      }
+      .about-section {
+        padding: 40px 0 40px 0;
+      }
+      .coming-soon {
+        font-size: 1.2rem;
+      }
+      .about-box {
+        padding: 18px 8px 14px 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Section: Future Of Music -->
+  <section class="top-section">
+    <img src="logo.png" alt="PuraTunes Logo" class="logo-img">
+    <div class="main-title">
+      The Future Of Music Belongs To Everybody!
+    </div>
+    <div class="main-desc">
+      Empowering independent artists, labels, venues, and studios with advanced technology, real-time, and monetization tools that complement existing platforms.
+    </div>
+    <!-- MailerLite Embed Code Start -->
+    <div class="ml-form-embed">
+      <!-- Replace this block with your MailerLite embed code.
+           Example MailerLite HTML embed (replace with your own): -->
+      <form action="https://your-mailerlite-endpoint-url" method="post" target="_blank" novalidate>
+        <input type="email" name="email" placeholder="Email address" required>
+        <button type="submit">Notify Me</button>
+      </form>
+      <!-- End MailerLite Embed -->
+    </div>
+    <div class="coming-soon">Coming Soon</div>
+  </section>
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="about-content">
+      <img src="logo.png" alt="PuraTunes Logo" class="about-logo-img">
+      <div class="about-title">About PuraTunes</div>
+      <div class="about-box">
+        <div class="about-section-block">
+          <div class="about-heading">
+            <span class="about-icon">🎧</span>
+            Why We Exist
+          </div>
+          <p class="about-desc">
+            The music industry can be challenging for independent artists. And communities are underserved. PuraTunes is here to empower artists and enrich global communities.
+          </p>
+        </div>
+        <div class="about-section-block">
+          <div class="about-heading">
+            <span class="about-icon">👤</span>
+            Our Mission
+          </div>
+          <ul class="mission-list about-list">
+            <li>Enable artists to livestream their music across the world</li>
+            <li>Facilitate creative tools for music-makers</li>
+            <li>Grow a thriving, inclusive community</li>
+          </ul>
+        </div>
+        <div class="about-section-block">
+          <div class="about-heading">
+            <span class="about-icon">🤝</span>
+            A Platform for Everybody
+          </div>
+          <p class="platform-desc">
+            PuraTunes is committed to supporting artists and advancing social justice. Over time, we hope to build a fairer and more generative ecosystem for all.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
