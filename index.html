@@ -24,15 +24,24 @@
     .logo-wrapper, .about-logo-wrapper {
       border-radius: 24px;
       padding: 20px;
-      display: inline-block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-bottom: 30px;
       margin-top: 50px;
       background: none;
     }
     .logo-img {
-      width: 220px;
-      max-width: 60vw;
+      width: 440px;
+      max-width: 90vw;
       display: block;
+    }
+    .about-logo-img {
+      width: 390px;
+      max-width: 80vw;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     .main-title {
       font-size: 2.3rem;
@@ -54,15 +63,19 @@
       margin-left: auto;
       margin-right: auto;
     }
-    .ml-form-embed {
+    .ml-embedded {
       display: flex;
       justify-content: center;
       align-items: center;
+      min-height: 120px;
       margin-bottom: 30px;
       width: 100%;
       max-width: 420px;
       margin-left: auto;
       margin-right: auto;
+      background: rgba(30, 25, 70, 0.44);
+      border-radius: 10px;
+      padding: 16px 8px;
     }
     .coming-soon {
       font-size: 2rem;
@@ -89,11 +102,9 @@
       margin-bottom: 28px;
       margin-top: 0;
       background: none;
-    }
-    .about-logo-img {
-      width: 195px;
-      max-width: 45vw;
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     .about-title {
       font-size: 2.1rem;
@@ -151,13 +162,14 @@
     }
     @media (max-width: 600px) {
       .main-title { font-size: 1.4rem; }
-      .about-logo-img, .logo-img { width: 60vw; }
+      .about-logo-img, .logo-img { width: 80vw; }
       .about-title { font-size: 1.3rem; }
       .about-content { padding: 0 6vw; }
       .about-section { padding: 40px 0 40px 0; }
       .coming-soon { font-size: 1.2rem; }
       .about-box { padding: 18px 8px 14px 8px; }
       .logo-wrapper, .about-logo-wrapper { padding: 10px; }
+      .ml-embedded { padding: 8px 2px; min-height: 80px;}
     }
   </style>
 </head>
@@ -172,17 +184,8 @@
     <div class="main-desc">
       Empowering independent artists, labels, venues, and studios with advanced technology, real-time, and monetization tools that complement existing platforms.
     </div>
-    <div class="ml-form-embed">
-      <!-- MailerLite Universal -->
-      <script>
-        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-        ml('account', '1692076');
-      </script>
-      <!-- End MailerLite Universal -->
-    </div>
+    <div class="ml-embedded" data-form="vUDs1X"></div>
+    <script src="https://assets.mailerlite.com/js/universal.js"></script>
     <div class="coming-soon">Coming Soon</div>
   </section>
   <section class="about-section">
