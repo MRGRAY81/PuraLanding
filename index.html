@@ -8,24 +8,22 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-  --main-bg: #0c0c34; /* deep indigo/navy to match the logo backdrop */
-  --white: #fff;
-  --text: #f3f3f3;
-  --box-bg: #161a3c;
-  --border: #2b2169;
-  --button-bg: #3d44fa;
-  --button-hover: #570cb2;
-  --icon-bg: transparent;
-}
-
-body {
-  margin: 0;
-  font-family: 'Montserrat', Arial, sans-serif;
-  text-align: center;
-  background-color: var(--main-bg); /* flat color across the whole page */
-  color: var(--white);
-}
-
+      --gradient-top: linear-gradient(180deg, #2e117a 0%, #0d1e59 70%);
+      --main-blue: #0d1e59;
+      --about-bg: #0b0b24;
+      --box-bg: rgba(30, 25, 70, 0.88);
+      --border: #2b2169;
+      --button-bg: #3d44fa;
+      --button-hover: #570cb2;
+      --white: #fff;
+      --text: #f3f3f3;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: var(--gradient-top);
+      color: var(--text);
+    }
     .top-section {
       min-height: 100vh;
       background: var(--gradient-top);
@@ -48,6 +46,8 @@ body {
       text-align: center;
       margin: 0 0 25px 0;
       line-height: 1.15;
+      letter-spacing: 0.02em;
+      text-transform: none;
     }
     .main-desc {
       font-size: 1.15rem;
@@ -60,30 +60,30 @@ body {
       margin-left: auto;
       margin-right: auto;
     }
-    .email-form {
+    /* MailerLite Form Styles */
+    .ml-form-embed {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 0;
       margin-bottom: 30px;
+      width: 100%;
       max-width: 420px;
       margin-left: auto;
       margin-right: auto;
     }
-    .email-input {
+    .ml-form-embed input[type="email"] {
       flex: 1 1 auto;
       padding: 16px 18px;
       font-size: 1.1rem;
       border-radius: 8px 0 0 8px;
-      border: none;
-      outline: none;
+      border: 2px solid #3538a6;
       background: #161a3c;
       color: #fff;
       font-family: inherit;
+      outline: none;
       margin: 0;
-      border: 2px solid #3538a6;
     }
-    .notify-btn {
+    .ml-form-embed button[type="submit"] {
       padding: 16px 30px;
       font-size: 1.1rem;
       border-radius: 0 8px 8px 0;
@@ -97,7 +97,7 @@ body {
       border: 2px solid #3538a6;
       border-left: none;
     }
-    .notify-btn:hover {
+    .ml-form-embed button[type="submit"]:hover {
       background: var(--button-hover);
     }
     .coming-soon {
@@ -140,7 +140,6 @@ body {
       border-radius: 20px;
       border: 1px solid var(--border);
       padding: 32px 24px 24px 24px;
-      margin-bottom: 0;
     }
     .about-section-block {
       margin-bottom: 26px;
@@ -209,21 +208,25 @@ body {
   </style>
 </head>
 <body>
-  <!-- Top Section: Future of Music -->
+  <!-- Top Section: Future Of Music -->
   <section class="top-section">
     <img src="logo.png" alt="PuraTunes Logo" class="logo-img">
     <div class="main-title">
-      The future of music<br>belongs to everybody!
+      The Future Of Music Belongs To Everybody!
     </div>
     <div class="main-desc">
-      Empowering Independent Artists, Labels, Venues, and Studios with advanced technology, real-time, and monetization tools that complement existing platforms.
+      Empowering independent artists, labels, venues, and studios with advanced technology, real-time, and monetization tools that complement existing platforms.
     </div>
-    <!-- Email Form (MailerLite placeholder) -->
-    <form class="email-form" action="#" method="POST" id="mailerlite-form">
-      <input type="email" class="email-input" name="email" placeholder="Email address" required>
-      <button class="notify-btn" type="submit">Notify Me</button>
-    </form>
-    <!-- Replace above <form> with your MailerLite embed code for live email capture -->
+    <!-- MailerLite Embed Code Start -->
+    <div class="ml-form-embed">
+      <!-- Replace this block with your MailerLite embed code.
+           Example MailerLite HTML embed (replace with your own): -->
+      <form action="https://your-mailerlite-endpoint-url" method="post" target="_blank" novalidate>
+        <input type="email" name="email" placeholder="Email address" required>
+        <button type="submit">Notify Me</button>
+      </form>
+      <!-- End MailerLite Embed -->
+    </div>
     <div class="coming-soon">Coming Soon</div>
   </section>
   <!-- About Section -->
@@ -264,17 +267,5 @@ body {
       </div>
     </div>
   </section>
-  <!-- Optional JS for local demo only (remove for MailerLite embed) -->
-  <script>
-    // Demo form handler (replace with MailerLite integration)
-    document.getElementById('mailerlite-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const email = this.email.value;
-      alert('Thank you! You\'ll be notified at: ' + email);
-      this.reset();
-    });
-  </script>
 </body>
 </html>
-
-
