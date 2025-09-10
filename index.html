@@ -50,49 +50,6 @@
       font-size: 1.2rem;
     }
 
-    .subscribe-form {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .subscribe-form input {
-      padding: 14px;
-      font-size: 1rem;
-      border: none;
-      outline: none;
-      border-radius: 6px 0 0 6px;
-      width: 260px;
-      max-width: 100%;
-    }
-
-    .subscribe-form button {
-      padding: 14px 25px;
-      font-size: 1rem;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      background: #4a90e2;
-      color: #ffffff;
-      border-radius: 0 6px 6px 0;
-      transition: background 0.3s ease;
-    }
-
-    .subscribe-form button:hover {
-      background: #357ab8;
-    }
-
-    @media (max-width: 480px) {
-      .subscribe-form {
-        flex-direction: column;
-      }
-      .subscribe-form input, .subscribe-form button {
-        border-radius: 6px;
-        margin: 5px 0;
-        width: 100%;
-      }
-    }
-
     /* About */
     .about {
       background: #0c0f5a;
@@ -117,4 +74,64 @@
       font-size: 0.9rem;
     }
 
-    footer a
+    footer a {
+      color: #4a90e2;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <img src="logo.png" alt="PuraTunes Logo" class="logo" />
+    <h1>The Future Of Music Belongs To Everybody!</h1>
+    <p>
+      Empowering independent artists, labels, venues, and studios with advanced
+      technology, real-time features, and monetization tools that complement existing platforms.
+    </p>
+
+    <!-- MailerLite Embed -->
+    <div class="ml-embedded" data-form="vUDs1X"></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <h2>About PuraTunes</h2>
+    <p>
+      PuraTunes is building a global stage for music where artists, fans, venues,
+      and studios connect directly. We believe in fair opportunities, creative freedom,
+      and a future where music truly belongs to everybody.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 PuraTunes. All Rights Reserved.</p>
+    <p>
+      <a href="#hero">Home</a> |
+      <a href="#about">About</a> |
+      <a href="mailto:info@puratunes.com">Contact</a>
+    </p>
+  </footer>
+
+  <!-- MailerLite Script -->
+  <script>
+    (function(m,a,i,l,e,r){ m['MailerLiteObject']=e;function f(){
+    var c={ a:arguments,q:[]};var r=this.push(c);return r};f.q=f.q||[];
+    m[e]=m[e]||function(){ return f.q.push(arguments)};m[e].q=f.q||[];
+    r=a.createElement(i);var _=a.getElementsByTagName(i)[0];
+    r.async=1;r.src=l+'?v'+(~~(new Date().getTime()/1000000));
+    _.parentNode.insertBefore(r,_);
+    })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+    var ml_account = ml('accounts', 'YOUR-ACCOUNT-ID', 'vUDs1X', 'load');
+  </script>
+
+</body>
+</html>
