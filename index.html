@@ -4,13 +4,11 @@
   <meta charset="UTF-8">
   <title>PuraTunes - Coming Soon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Google Fonts for modern look -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --gradient-top: linear-gradient(180deg, #2e117a 0%, #0d1e59 70%);
       --main-blue: #0d1e59;
-      --about-bg: #0b0b24;
+      --about-bg: #0d1e59; /* match the main background */
       --box-bg: rgba(30, 25, 70, 0.88);
       --border: #2b2169;
       --button-bg: #3d44fa;
@@ -21,12 +19,12 @@
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
-      background: var(--gradient-top);
+      background: var(--main-blue);
       color: var(--text);
     }
     .top-section {
       min-height: 100vh;
-      background: var(--gradient-top);
+      background: var(--main-blue);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -47,7 +45,6 @@
       margin: 0 0 25px 0;
       line-height: 1.15;
       letter-spacing: 0.02em;
-      text-transform: none;
     }
     .main-desc {
       font-size: 1.15rem;
@@ -60,7 +57,6 @@
       margin-left: auto;
       margin-right: auto;
     }
-    /* MailerLite Form Styles */
     .ml-form-embed {
       display: flex;
       justify-content: center;
@@ -108,7 +104,6 @@
       letter-spacing: 1px;
       text-align: center;
     }
-    /* About Section */
     .about-section {
       background: var(--about-bg);
       width: 100%;
@@ -208,7 +203,6 @@
   </style>
 </head>
 <body>
-  <!-- Top Section: Future Of Music -->
   <section class="top-section">
     <img src="logo.png" alt="PuraTunes Logo" class="logo-img">
     <div class="main-title">
@@ -217,10 +211,8 @@
     <div class="main-desc">
       Empowering independent artists, labels, venues, and studios with advanced technology, real-time, and monetization tools that complement existing platforms.
     </div>
-    <!-- MailerLite Embed Code Start -->
     <div class="ml-form-embed">
-      <!-- Replace this block with your MailerLite embed code.
-           Example MailerLite HTML embed (replace with your own): -->
+      <!-- Replace this block with your MailerLite embed code -->
       <form action="https://your-mailerlite-endpoint-url" method="post" target="_blank" novalidate>
         <input type="email" name="email" placeholder="Email address" required>
         <button type="submit">Notify Me</button>
@@ -229,7 +221,6 @@
     </div>
     <div class="coming-soon">Coming Soon</div>
   </section>
-  <!-- About Section -->
   <section class="about-section">
     <div class="about-content">
       <img src="logo.png" alt="PuraTunes Logo" class="about-logo-img">
