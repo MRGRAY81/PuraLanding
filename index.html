@@ -8,24 +8,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --gradient-top: linear-gradient(180deg, #2e117a 0%, #0d1e59 70%);
-      --main-blue: #0d1e59;
-      --about-bg: #0b0b24;
-      --logo-gradient: linear-gradient(90deg, #a23afc 0%, #0ec4fc 100%);
-      --white: #fff;
-      --text: #f3f3f3;
-      --box-bg: rgba(30, 25, 70, 0.88);
-      --border: #2b2169;
-      --button-bg: #3d44fa;
-      --button-hover: #570cb2;
-      --icon-bg: transparent;
-    }
-    body {
-      margin: 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-      background: var(--gradient-top);
-      color: var(--text);
-    }
+  --main-bg: #0c0c34; /* deep indigo/navy to match the logo backdrop */
+  --white: #fff;
+  --text: #f3f3f3;
+  --box-bg: #161a3c;
+  --border: #2b2169;
+  --button-bg: #3d44fa;
+  --button-hover: #570cb2;
+  --icon-bg: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  text-align: center;
+  background-color: var(--main-bg); /* flat color across the whole page */
+  color: var(--white);
+}
+
     .top-section {
       min-height: 100vh;
       background: var(--gradient-top);
@@ -276,4 +276,5 @@
   </script>
 </body>
 </html>
+
 
