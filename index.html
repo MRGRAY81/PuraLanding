@@ -4,34 +4,139 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PuraTunes – Coming Soon</title>
-
-  <!-- MailerLite Embed Styles -->
-  <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1757400");</style>
-  <style type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: 'Montserrat', Arial, Helvetica, sans-serif;
       color: #fff;
       background: linear-gradient(135deg, #090542, #0c0f5a, #0d1c7a);
       margin: 0;
       line-height: 1.6;
     }
-    section { padding: 80px 20px; text-align: center; }
-    .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-    .hero .logo { width: 200px; margin-bottom: 20px; }
-    .hero h1 { font-size: 2.2rem; margin-bottom: 20px; }
-    .hero p { max-width: 600px; margin: 0 auto 20px; font-size: 1.2rem; }
-    .coming-soon { margin-top: 20px; font-weight: bold; font-size: 1.3rem; }
-    .about { background: #0c0f5a; }
-    .about h2 { font-size: 2rem; margin-bottom: 20px; }
-    .about p, .about ul { max-width: 700px; margin: 0 auto 20px; font-size: 1.1rem; }
-    footer { background: #090542; padding: 20px; text-align: center; font-size: 0.9rem; }
-    footer a { color: #4a90e2; margin: 0 10px; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-  </style>
-
-  <!-- MailerLite’s CSS (keep the full block you pasted earlier here) -->
-  <style>
-    /* PASTE the long MailerLite CSS block here (from your embed snippet) */
+    section { padding: 48px 20px; text-align: center; }
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 24px;
+    }
+    .hero .logo {
+      width: 400px;
+      max-width: 95vw;
+      margin-bottom: 16px;
+      margin-top: 4px;
+      display: block;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 14px;
+      margin-top: 0;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 12px auto;
+      font-size: 1.15rem;
+      font-weight: 400;
+    }
+    .ml-form-embedContainer {
+      margin: 12px auto 6px auto;
+      padding: 14px 10px 10px 10px;
+      max-width: 350px;
+      background: rgba(30,25,70,0.22);
+      border-radius: 10px;
+    }
+    .ml-form-embedContent h4 {
+      margin-bottom: 4px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    .ml-form-embedContent p {
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+    }
+    .ml-form-fieldRow input[type="email"] {
+      width: 90%;
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 6px;
+    }
+    .ml-form-embedSubmit button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      background: #4a90e2;
+      color: #fff;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 4px;
+    }
+    .coming-soon {
+      margin-top: 16px;
+      font-weight: bold;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+    .about {
+      background: #0c0f5a;
+      padding: 36px 20px;
+    }
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      margin-top: 0;
+      font-weight: 700;
+    }
+    .about p, .about ul {
+      max-width: 700px;
+      margin: 0 auto 12px auto;
+      font-size: 1.04rem;
+    }
+    .about ul {
+      padding-left: 0;
+      list-style: none;
+    }
+    .about li {
+      margin-bottom: 8px;
+      font-size: 1.06rem;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .about li span {
+      margin-right: 8px;
+      font-size: 1.25rem;
+    }
+    footer {
+      background: #090542;
+      padding: 18px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #4a90e2;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      .hero .logo { width: 80vw; }
+      .hero h1 { font-size: 1.4rem; }
+      .about h2 { font-size: 1.2rem; }
+      .about p, .about ul, .about li { font-size: 0.98rem; }
+      .ml-form-embedContainer { padding: 8px 2px; }
+    }
   </style>
 </head>
 <body>
@@ -39,13 +144,13 @@
   <!-- HERO -->
   <section class="hero" id="hero">
     <img src="logo.png" alt="PuraTunes Logo" class="logo" />
-    <h1>The future of music belongs to everybody!</h1>
+    <h1>The Future Of Music Belongs To Everybody!</h1>
     <p>
       Empowering independent artists, labels, venues, and studios with advanced
       technology, real-time, and monetization tools that complement existing platforms.
     </p>
 
-    <!-- MailerLite FULL Embed -->
+    <!-- MailerLite Embed -->
     <div id="mlb2-29646648" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-29646648">
       <div class="ml-form-align-center">
         <div class="ml-form-embedWrapper embedForm">
@@ -87,9 +192,9 @@
     <h2>About PuraTunes</h2>
     <p>The music industry can be challenging for independent artists, and communities are underserved. PuraTunes is here to empower artists and enrich global communities.</p>
     <ul>
-      <li>🎧 Enable artists to livestream their music across the world</li>
-      <li>🌍 Facilitate creative tools for music-makers</li>
-      <li>🤝 Grow a thriving, inclusive community</li>
+      <li><span>🎧</span>Enable artists to livestream their music across the world</li>
+      <li><span>🌍</span>Facilitate creative tools for music-makers</li>
+      <li><span>🤝</span>Grow a thriving, inclusive community</li>
     </ul>
     <p>PuraTunes is committed to supporting artists and advancing social justice. Over time, we hope to build a fairer and more generative ecosystem for all.</p>
   </section>
@@ -97,7 +202,9 @@
   <!-- FOOTER -->
   <footer>
     <p>© 2025 PuraTunes. All Rights Reserved.</p>
-    <p><a href="#hero">Home</a> | <a href="#about">About</a> | <a href="mailto:info@puratunes.com">Contact</a></p>
+    <p>
+      <a href="#hero">Home</a> | <a href="#about">About</a> | <a href="mailto:info@puratunes.com">Contact</a>
+    </p>
   </footer>
 
   <!-- MailerLite Scripts -->
