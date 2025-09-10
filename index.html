@@ -8,7 +8,7 @@
   <style>
     :root {
       --main-blue: #0d1e59;
-      --about-bg: #0d1e59; /* match the main background */
+      --about-bg: #0d1e59;
       --box-bg: rgba(30, 25, 70, 0.88);
       --border: #2b2169;
       --button-bg: #3d44fa;
@@ -66,35 +66,6 @@
       max-width: 420px;
       margin-left: auto;
       margin-right: auto;
-    }
-    .ml-form-embed input[type="email"] {
-      flex: 1 1 auto;
-      padding: 16px 18px;
-      font-size: 1.1rem;
-      border-radius: 8px 0 0 8px;
-      border: 2px solid #3538a6;
-      background: #161a3c;
-      color: #fff;
-      font-family: inherit;
-      outline: none;
-      margin: 0;
-    }
-    .ml-form-embed button[type="submit"] {
-      padding: 16px 30px;
-      font-size: 1.1rem;
-      border-radius: 0 8px 8px 0;
-      border: none;
-      background: var(--button-bg);
-      color: #fff;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s;
-      margin-left: -2px;
-      border: 2px solid #3538a6;
-      border-left: none;
-    }
-    .ml-form-embed button[type="submit"]:hover {
-      background: var(--button-hover);
     }
     .coming-soon {
       font-size: 2rem;
@@ -212,12 +183,15 @@
       Empowering independent artists, labels, venues, and studios with advanced technology, real-time, and monetization tools that complement existing platforms.
     </div>
     <div class="ml-form-embed">
-      <!-- Replace this block with your MailerLite embed code -->
-      <form action="https://your-mailerlite-endpoint-url" method="post" target="_blank" novalidate>
-        <input type="email" name="email" placeholder="Email address" required>
-        <button type="submit">Notify Me</button>
-      </form>
-      <!-- End MailerLite Embed -->
+      <!-- MailerLite Universal -->
+      <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '1692076');
+      </script>
+      <!-- End MailerLite Universal -->
     </div>
     <div class="coming-soon">Coming Soon</div>
   </section>
