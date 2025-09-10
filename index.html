@@ -6,41 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --main-blue: #0d1e59;
-      --about-bg: #0d1e59;
-      --box-bg: rgba(30, 25, 70, 0.88);
-      --border: #2b2169;
-      --button-bg: #3d44fa;
-      --button-hover: #570cb2;
-      --white: #fff;
-      --text: #f3f3f3;
-    }
     body {
       margin: 0;
       font-family: 'Montserrat', Arial, sans-serif;
-      background: var(--main-blue);
-      color: var(--text);
+      background: radial-gradient(ellipse at bottom right, #13397b 0%, #110c30 100%);
+      background-color: #110c30;
+      color: #f3f3f3;
     }
     .top-section {
       min-height: 100vh;
-      background: var(--main-blue);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-start;
       padding: 0 20px 40px 20px;
+      background: none;
+    }
+    .logo-wrapper, .about-logo-wrapper {
+      border-radius: 24px;
+      padding: 20px;
+      display: inline-block;
+      margin-bottom: 30px;
+      margin-top: 50px;
+      background: none;
     }
     .logo-img {
       width: 220px;
       max-width: 60vw;
-      margin: 50px auto 30px auto;
       display: block;
     }
     .main-title {
       font-size: 2.3rem;
       font-weight: 700;
-      color: var(--white);
+      color: #fff;
       text-align: center;
       margin: 0 0 25px 0;
       line-height: 1.15;
@@ -50,7 +48,7 @@
       font-size: 1.15rem;
       text-align: center;
       margin-bottom: 36px;
-      color: var(--text);
+      color: #f3f3f3;
       font-weight: 400;
       line-height: 1.35;
       max-width: 600px;
@@ -71,27 +69,31 @@
       font-size: 2rem;
       font-weight: 700;
       margin-top: 28px;
-      color: var(--white);
+      color: #fff;
       letter-spacing: 1px;
       text-align: center;
     }
     .about-section {
-      background: var(--about-bg);
       width: 100%;
       padding: 60px 0 60px 0;
       display: flex;
       flex-direction: column;
       align-items: center;
+      background: none;
     }
     .about-content {
       max-width: 520px;
       width: 100%;
       padding: 0 20px;
     }
+    .about-logo-wrapper {
+      margin-bottom: 28px;
+      margin-top: 0;
+      background: none;
+    }
     .about-logo-img {
       width: 195px;
       max-width: 45vw;
-      margin: 0 auto 28px auto;
       display: block;
     }
     .about-title {
@@ -99,12 +101,12 @@
       font-weight: 700;
       margin-bottom: 30px;
       text-align: center;
-      color: var(--white);
+      color: #fff;
     }
     .about-box {
-      background: var(--box-bg);
+      background: rgba(30, 25, 70, 0.88);
       border-radius: 20px;
-      border: 1px solid var(--border);
+      border: 1px solid #2b2169;
       padding: 32px 24px 24px 24px;
     }
     .about-section-block {
@@ -130,11 +132,11 @@
       font-size: 1rem;
       margin-left: 2.6rem;
       margin-bottom: 0;
-      color: var(--text);
+      color: #f3f3f3;
     }
     .about-list {
       margin-left: 2.6rem;
-      color: var(--text);
+      color: #f3f3f3;
       font-size: 1rem;
       margin-bottom: 0;
     }
@@ -146,36 +148,25 @@
       font-size: 1rem;
       margin-left: 2.6rem;
       margin-bottom: 0;
-      color: var(--text);
+      color: #f3f3f3;
     }
     @media (max-width: 600px) {
-      .main-title {
-        font-size: 1.4rem;
-      }
-      .about-logo-img, .logo-img {
-        width: 60vw;
-      }
-      .about-title {
-        font-size: 1.3rem;
-      }
-      .about-content {
-        padding: 0 6vw;
-      }
-      .about-section {
-        padding: 40px 0 40px 0;
-      }
-      .coming-soon {
-        font-size: 1.2rem;
-      }
-      .about-box {
-        padding: 18px 8px 14px 8px;
-      }
+      .main-title { font-size: 1.4rem; }
+      .about-logo-img, .logo-img { width: 60vw; }
+      .about-title { font-size: 1.3rem; }
+      .about-content { padding: 0 6vw; }
+      .about-section { padding: 40px 0 40px 0; }
+      .coming-soon { font-size: 1.2rem; }
+      .about-box { padding: 18px 8px 14px 8px; }
+      .logo-wrapper, .about-logo-wrapper { padding: 10px; }
     }
   </style>
 </head>
 <body>
   <section class="top-section">
-    <img src="logo.png" alt="PuraTunes Logo" class="logo-img">
+    <div class="logo-wrapper">
+      <img src="logo.png" alt="PuraTunes Logo" class="logo-img">
+    </div>
     <div class="main-title">
       The Future Of Music Belongs To Everybody!
     </div>
@@ -197,7 +188,9 @@
   </section>
   <section class="about-section">
     <div class="about-content">
-      <img src="logo.png" alt="PuraTunes Logo" class="about-logo-img">
+      <div class="about-logo-wrapper">
+        <img src="logo.png" alt="PuraTunes Logo" class="about-logo-img">
+      </div>
       <div class="about-title">About PuraTunes</div>
       <div class="about-box">
         <div class="about-section-block">
