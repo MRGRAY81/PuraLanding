@@ -1,108 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>PuraTunes - Coming Soon</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PuraTunes – The Future Of Music</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-      background: linear-gradient(135deg, #090542, #0c0f5a, #0d1c7a);
-      color: #f3f3f3;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .top-section {
-      min-height: 80vh;
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #fff;
+      background: linear-gradient(135deg, #090542, #0c0f5a, #0d1c7a);
+      line-height: 1.6;
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 0 20px 20px 20px;
-      background: none;
-    }
-    .logo-wrapper {
-      margin-top: 20px;
-      margin-bottom: 10px;
-      display: flex;
       justify-content: center;
       align-items: center;
+      background: linear-gradient(135deg, #090542, #0c0f5a, #0d1c7a);
     }
-    .logo-img {
-      width: 600px;
-      max-width: 100vw;
-      display: block;
-    }
-    .main-title {
-      font-size: 2.3rem;
-      font-weight: 700;
-      color: #fff;
-      text-align: center;
-      margin: 10px 0 10px 0;
-      line-height: 1.15;
-      letter-spacing: 0.02em;
-    }
-    .main-desc {
-      font-size: 1.15rem;
-      text-align: center;
-      margin-bottom: 18px;
-      color: #f3f3f3;
-      font-weight: 400;
-      line-height: 1.35;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .ml-embedded {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 80px;
-      margin-bottom: 16px;
-      width: 100%;
-      max-width: 400px;
-      margin-left: auto;
-      margin-right: auto;
-      background: rgba(30, 25, 70, 0.24);
-      border-radius: 10px;
-      padding: 12px 8px;
-    }
-    .coming-soon {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-top: 12px;
-      color: #fff;
-      letter-spacing: 1px;
-      text-align: center;
-    }
-    @media (max-width: 800px) {
-      .logo-img { width: 90vw; }
-    }
-    @media (max-width: 600px) {
-      .main-title { font-size: 1.4rem; }
-      .logo-img { width: 80vw; }
-      .main-desc { font-size: 1rem; }
-      .logo-wrapper { margin-top: 10px; }
-      .ml-embedded { min-height: 60px; padding: 8px 2px; }
-      .coming-soon { font-size: 1.2rem; }
-    }
-  </style>
-</head>
-<body>
-  <section class="top-section">
-    <div class="logo-wrapper">
-      <img src="logo.png" alt="PuraTunes Logo" class="logo-img">
-    </div>
-    <div class="main-title">
-      The Future Of Music Belongs To Everybody!
-    </div>
-    <div class="main-desc">
-      Empowering independent artists, labels, venues, and studios with advanced technology, real-time, and monetization tools that complement existing platforms.
-    </div>
-    <div class="ml-embedded" data-form="vUDs1X"></div>
-    <script src="https://assets.mailerlite.com/js/universal.js"></script>
-    <div class="coming-soon">Coming Soon</div>
-  </section>
-</body>
-</html>
 
+    .hero .logo {
+      width: 180px;
+      height: auto;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-size: 1.2rem;
+    }
+
+    .subscribe-form {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .subscribe-form input {
+      padding: 14px;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      border-radius: 6px 0 0 6px;
+      width: 260px;
+      max-width: 100%;
+    }
+
+    .subscribe-form button {
+      padding: 14px 25px;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      background: #4a90e2;
+      color: #ffffff;
+      border-radius: 0 6px 6px 0;
+      transition: background 0.3s ease;
+    }
+
+    .subscribe-form button:hover {
+      background: #357ab8;
+    }
+
+    @media (max-width: 480px) {
+      .subscribe-form {
+        flex-direction: column;
+      }
+      .subscribe-form input, .subscribe-form button {
+        border-radius: 6px;
+        margin: 5px 0;
+        width: 100%;
+      }
+    }
+
+    /* About */
+    .about {
+      background: #0c0f5a;
+    }
+
+    .about h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #090542;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a
