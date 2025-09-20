@@ -69,9 +69,32 @@
       font-family: 'Montserrat', sans-serif !important;
       margin-bottom: 12px;
     }
+    #mlb2-29646648 .ml-form-checkboxRow {
+      margin: 16px 0 !important;
+      text-align: left !important;
+    }
+    #mlb2-29646648 .ml-form-checkboxRow .checkbox {
+      display: flex !important;
+      align-items: flex-start !important;
+      gap: 8px !important;
+      cursor: pointer !important;
+    }
+    #mlb2-29646648 .ml-form-checkboxRow input[type="checkbox"] {
+      margin: 0 !important;
+      min-width: 16px !important;
+      height: 16px !important;
+      margin-top: 2px !important;
+    }
     #mlb2-29646648 .ml-form-checkboxRow .label-description p {
       color: var(--muted) !important;
       font-size: 13px !important;
+      margin: 0 !important;
+      line-height: 1.4 !important;
+    }
+    #mlb2-29646648 .ml-form-recaptcha {
+      margin: 16px 0 !important;
+      display: flex !important;
+      justify-content: center !important;
     }
     #mlb2-29646648 .ml-form-embedSubmit .primary {
       background: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
@@ -87,6 +110,30 @@
     }
     #mlb2-29646648 .ml-form-embedSubmit .primary:hover {
       filter: brightness(1.1);
+    }
+    #mlb2-29646648 .ml-form-embedSubmit .loading {
+      background: var(--input-bg) !important;
+      border: 2px solid var(--input-border) !important;
+      border-radius: 10px !important;
+      padding: 14px !important;
+      color: var(--text) !important;
+      width: 100% !important;
+      font-family: 'Montserrat', sans-serif !important;
+      cursor: not-allowed !important;
+    }
+    #mlb2-29646648 .ml-form-embedSubmitLoad {
+      border: 2px solid var(--accent1);
+      border-top: 2px solid transparent;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      animation: spin 1s linear infinite;
+      display: inline-block;
+      margin-right: 8px;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
 
     /* Success message styling */
@@ -148,7 +195,7 @@
             <!-- Checkbox -->
             <div class="ml-form-checkboxRow ml-validate-required">
               <label class="checkbox">
-                <input type="checkbox">
+                <input type="checkbox" name="fields[consent]" value="1" required>
                 <div class="label-description">
                   <p>Opt in to receive news and updates.</p>
                 </div>
