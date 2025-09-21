@@ -22,15 +22,57 @@
     body {
       margin: 0;
       min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
       background: var(--bg);
       color: var(--text);
       font-family: 'Montserrat', sans-serif;
       text-align: center;
+      padding: 0;
+    }
+    
+    .hero-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
       padding: 24px;
+    }
+    
+    .about-section {
+      padding: 80px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .about-section h2 {
+      font-size: 36px;
+      margin-bottom: 60px;
+      font-weight: 700;
+    }
+    
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 60px;
+      margin-top: 40px;
+    }
+    
+    .about-item {
+      text-align: left;
+    }
+    
+    .about-item h3 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: var(--accent1);
+    }
+    
+    .about-item p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0;
     }
     .logo {
       width: 260px;
@@ -163,72 +205,95 @@
 </head>
 <body>
 
-  <img src="logo.png" alt="PuraTunes Logo" class="logo">
-  <h1>The Future of Music Belongs to Everybody 🎵</h1>
-  <p class="lead">Sign up to get updates on launch, exclusive invites, and early access.</p>
+  <div class="hero-section">
+    <img src="logo.png" alt="PuraTunes Logo" class="logo">
+    <h1>The Future of Music Belongs to Everybody 🎵</h1>
+    <p class="lead">Sign up to get updates on launch, exclusive invites, and early access.</p>
 
-  <!-- MailerLite Embed Form -->
-  <div id="mlb2-29646648" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-29646648">
-    <div class="ml-form-align-center">
-      <div class="ml-form-embedWrapper embedForm">
+    <!-- MailerLite Embed Form -->
+    <div id="mlb2-29646648" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-29646648">
+      <div class="ml-form-align-center">
+        <div class="ml-form-embedWrapper embedForm">
 
-        <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
-          <div class="ml-form-embedContent">
-            <h4>Keep Up To Speed</h4>
-            <p>Drop us your email and we will keep you posted on updates and launch dates.</p>
-          </div>
+          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+            <div class="ml-form-embedContent">
+              <h4>Keep Up To Speed</h4>
+              <p>Drop us your email and we will keep you posted on updates and launch dates.</p>
+            </div>
 
-          <form class="ml-block-form"
-                action="https://assets.mailerlite.com/jsonp/1692076/forms/162811952246032083/subscribe"
-                method="post" target="_blank">
+            <form class="ml-block-form"
+                  action="https://assets.mailerlite.com/jsonp/1692076/forms/162811952246032083/subscribe"
+                  method="post" target="_blank">
 
-            <div class="ml-form-formContent">
-              <div class="ml-form-fieldRow ml-last-item">
-                <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
-                  <input aria-label="email" aria-required="true"
-                         type="email" name="fields[email]"
-                         class="form-control" placeholder="Email" autocomplete="email">
+              <div class="ml-form-formContent">
+                <div class="ml-form-fieldRow ml-last-item">
+                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                    <input aria-label="email" aria-required="true"
+                           type="email" name="fields[email]"
+                           class="form-control" placeholder="Email" autocomplete="email">
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Checkbox -->
-            <div class="ml-form-checkboxRow ml-validate-required">
-              <label class="checkbox">
-                <input type="checkbox" name="fields[consent]" value="1" required>
-                <div class="label-description">
-                  <p>Opt in to receive news and updates.</p>
-                </div>
-              </label>
-            </div>
+              <!-- Checkbox -->
+              <div class="ml-form-checkboxRow ml-validate-required">
+                <label class="checkbox">
+                  <input type="checkbox" name="fields[consent]" value="1" required>
+                  <div class="label-description">
+                    <p>Opt in to receive news and updates.</p>
+                  </div>
+                </label>
+              </div>
 
-            <!-- reCAPTCHA -->
-            <div class="ml-form-recaptcha ml-validate-required">
-              <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
-            </div>
+              <!-- reCAPTCHA -->
+              <div class="ml-form-recaptcha ml-validate-required">
+                <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+              </div>
 
-            <input type="hidden" name="ml-submit" value="1">
+              <input type="hidden" name="ml-submit" value="1">
 
-            <div class="ml-form-embedSubmit">
-              <button type="submit" class="primary">Subscribe</button>
-              <button disabled="disabled" style="display:none;" type="button" class="loading">
-                <div class="ml-form-embedSubmitLoad"></div>
-                <span class="sr-only">Loading...</span>
-              </button>
-            </div>
+              <div class="ml-form-embedSubmit">
+                <button type="submit" class="primary">Subscribe</button>
+                <button disabled="disabled" style="display:none;" type="button" class="loading">
+                  <div class="ml-form-embedSubmitLoad"></div>
+                  <span class="sr-only">Loading...</span>
+                </button>
+              </div>
 
-            <input type="hidden" name="anticsrf" value="true">
-          </form>
-        </div>
-
-        <!-- Success Message -->
-        <div class="ml-form-successBody row-success" style="display:none">
-          <div class="ml-form-successContent">
-            <h4>🎉 Thank you!</h4>
-            <p>You have successfully joined our subscriber list.</p>
+              <input type="hidden" name="anticsrf" value="true">
+            </form>
           </div>
-        </div>
 
+          <!-- Success Message -->
+          <div class="ml-form-successBody row-success" style="display:none">
+            <div class="ml-form-successContent">
+              <h4>🎉 Thank you!</h4>
+              <p>You have successfully joined our subscriber list.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="about-section">
+    <h2>About PuraTunes</h2>
+    
+    <div class="about-grid">
+      <div class="about-item">
+        <h3>Why We Exist</h3>
+        <p>Music is a universal language that connects us all. Yet, the current music industry often limits access and opportunity for both artists and listeners. We believe everyone deserves a platform where creativity flows freely, where artists can reach their audience directly, and where music lovers can discover authentic sounds without barriers.</p>
+      </div>
+      
+      <div class="about-item">
+        <h3>Our Mission</h3>
+        <p>To democratize music by creating a platform that empowers independent artists while providing music enthusiasts with unparalleled access to diverse, authentic content. We're building a community where talent is recognized, creativity is rewarded, and music truly belongs to everybody.</p>
+      </div>
+      
+      <div class="about-item">
+        <h3>A Platform for Everybody</h3>
+        <p>Whether you're an emerging artist looking for your first audience, an established musician seeking creative freedom, or a music lover hunting for your next favorite song, PuraTunes is designed for you. Our technology ensures fair compensation for artists while keeping music accessible and affordable for everyone.</p>
       </div>
     </div>
   </div>
