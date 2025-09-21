@@ -45,7 +45,7 @@
     }
     
     .about-section h2 {
-      font-size: 36px;
+      font-size: 48px;
       margin-bottom: 60px;
       font-weight: 700;
     }
@@ -66,6 +66,16 @@
       margin-bottom: 20px;
       font-weight: 600;
       color: var(--accent1);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .about-item h3 .icon {
+      font-size: 28px;
+      min-width: 32px;
+      filter: hue-rotate(280deg) saturate(1.5) brightness(1.2);
+      text-shadow: 0 0 10px rgba(155, 58, 249, 0.3);
     }
     
     .about-item p {
@@ -201,6 +211,27 @@
       from { opacity: 0; transform: scale(0.9); }
       to { opacity: 1; transform: scale(1); }
     }
+    
+    /* Responsive design for mobile devices */
+    @media (max-width: 768px) {
+      .about-section h2 {
+        font-size: 36px;
+      }
+      
+      .about-item h3 {
+        font-size: 20px;
+        gap: 8px;
+      }
+      
+      .about-item h3 .icon {
+        font-size: 24px;
+        min-width: 28px;
+      }
+      
+      .about-grid {
+        gap: 40px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -282,17 +313,17 @@
     
     <div class="about-grid">
       <div class="about-item">
-        <h3>Why We Exist</h3>
+        <h3><span class="icon">🎧</span>Why We Exist</h3>
         <p>Music is a universal language that connects us all. Yet, the current music industry often limits access and opportunity for both artists and listeners. We believe everyone deserves a platform where creativity flows freely, where artists can reach their audience directly, and where music lovers can discover authentic sounds without barriers.</p>
       </div>
       
       <div class="about-item">
-        <h3>Our Mission</h3>
+        <h3><span class="icon">👤</span>Our Mission</h3>
         <p>To democratize music by creating a platform that empowers independent artists while providing music enthusiasts with unparalleled access to diverse, authentic content. We're building a community where talent is recognized, creativity is rewarded, and music truly belongs to everybody.</p>
       </div>
       
       <div class="about-item">
-        <h3>A Platform for Everybody</h3>
+        <h3><span class="icon">🤝</span>A Platform for Everybody</h3>
         <p>Whether you're an emerging artist looking for your first audience, an established musician seeking creative freedom, or a music lover hunting for your next favorite song, PuraTunes is designed for you. Our technology ensures fair compensation for artists while keeping music accessible and affordable for everyone.</p>
       </div>
     </div>
