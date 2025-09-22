@@ -38,6 +38,20 @@
       padding: 24px;
     }
     
+    .about-section-hero {
+      padding: 60px 0 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    
+    .about-section-hero h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
+      font-weight: 700;
+      color: var(--text);
+    }
+    
     .about-section {
       padding: 80px 24px;
       max-width: 1200px;
@@ -62,10 +76,18 @@
     }
     
     .about-item-icon {
-      width: 48px;
-      height: 48px;
+      width: 56px;
+      height: 56px;
       margin-bottom: 16px;
+      stroke: var(--accent1);
       fill: var(--accent1);
+      filter: drop-shadow(0 4px 8px rgba(155, 58, 249, 0.2));
+      transition: all 0.3s ease;
+    }
+    
+    .about-item:hover .about-item-icon {
+      transform: translateY(-2px);
+      filter: drop-shadow(0 8px 16px rgba(155, 58, 249, 0.3));
     }
     
     .about-item h3 {
@@ -221,6 +243,38 @@
       from { opacity: 0; transform: scale(0.9); }
       to { opacity: 1; transform: scale(1); }
     }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .about-section-hero h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+      
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-top: 30px;
+      }
+      
+      .about-item-icon {
+        width: 48px;
+        height: 48px;
+      }
+      
+      .about-item h3 {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+      
+      .about-item p {
+        font-size: 14px;
+      }
+      
+      .about-section-hero {
+        padding: 40px 0 30px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -228,6 +282,64 @@
   <div class="hero-section">
     <img src="logo.png" alt="PuraTunes Logo" class="logo">
     <p class="description">Empowering independent artists, labels, venues, and studios with advanced technology, real-time, and monetization tools that complement existing platforms.</p>
+    
+    <!-- About PuraTunes section moved to hero -->
+    <div class="about-section-hero">
+      <h2>About PuraTunes</h2>
+      
+      <div class="about-grid">
+        <div class="about-item">
+          <h3>
+            <svg class="about-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity="0.1"/>
+              <path d="M8 12l2 2 4-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z" stroke="currentColor" stroke-width="2" fill="none"/>
+              <circle cx="7" cy="7" r="1.5" fill="currentColor"/>
+              <circle cx="17" cy="7" r="1.5" fill="currentColor"/>
+              <circle cx="7" cy="17" r="1.5" fill="currentColor"/>
+              <circle cx="17" cy="17" r="1.5" fill="currentColor"/>
+            </svg>
+            Why We Exist
+          </h3>
+          <p>Music is a universal language that connects us all. Yet, the current music industry often limits access and opportunity for both artists and listeners. We believe everyone deserves a platform where creativity flows freely, where artists can reach their audience directly, and where music lovers can discover authentic sounds without barriers.</p>
+        </div>
+        
+        <div class="about-item">
+          <h3>
+            <svg class="about-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"/>
+              <path d="M12 8v8m-4-4h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="8" cy="6" r="1" fill="currentColor"/>
+              <circle cx="16" cy="6" r="1" fill="currentColor"/>
+              <circle cx="8" cy="18" r="1" fill="currentColor"/>
+              <circle cx="16" cy="18" r="1" fill="currentColor"/>
+              <path d="M12 2l1.5 1.5L12 5 10.5 3.5L12 2z" fill="currentColor"/>
+              <path d="M12 19l1.5 1.5L12 22l-1.5-1.5L12 19z" fill="currentColor"/>
+            </svg>
+            Our Mission
+          </h3>
+          <p>To democratize music by creating a platform that empowers independent artists while providing music enthusiasts with unparalleled access to diverse, authentic content. We're building a community where talent is recognized, creativity is rewarded, and music truly belongs to everybody.</p>
+        </div>
+        
+        <div class="about-item">
+          <h3>
+            <svg class="about-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.1"/>
+              <path d="M8 14s1.5 2 4 2 4-2 4-2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="9" cy="9" r="1" fill="currentColor"/>
+              <circle cx="15" cy="9" r="1" fill="currentColor"/>
+              <path d="M5.5 7.5l2 1.5m9-1.5l-2 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M5.5 16.5l2-1.5m9 1.5l-2-1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="4" cy="12" r="1.5" fill="currentColor"/>
+              <circle cx="20" cy="12" r="1.5" fill="currentColor"/>
+            </svg>
+            A Platform for Everybody
+          </h3>
+          <p>Whether you're an emerging artist looking for your first audience, an established musician seeking creative freedom, or a music lover hunting for your next favorite song, PuraTunes is designed for you. Our technology ensures fair compensation for artists while keeping music accessible and affordable for everyone.</p>
+        </div>
+      </div>
+    </div>
+
     <h1>The Future of Music Belongs to Everybody 🎵</h1>
     <p class="lead">Sign up to get updates on launch, exclusive invites, and early access.</p>
 
@@ -294,45 +406,6 @@
           </div>
 
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="about-section">
-    <h2>About PuraTunes</h2>
-    
-    <div class="about-grid">
-      <div class="about-item">
-        <h3>
-          <svg class="about-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 18V12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12V18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M21 19C21 20.1046 20.1046 21 19 21H18C16.8954 21 16 20.1046 16 19V16C16 14.8954 16.8954 14 18 14H21V19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M3 19C3 20.1046 3.89543 21 5 21H6C7.10457 21 8 20.1046 8 19V16C8 14.8954 7.10457 14 6 14H3V19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          Why We Exist
-        </h3>
-        <p>Music is a universal language that connects us all. Yet, the current music industry often limits access and opportunity for both artists and listeners. We believe everyone deserves a platform where creativity flows freely, where artists can reach their audience directly, and where music lovers can discover authentic sounds without barriers.</p>
-      </div>
-      
-      <div class="about-item">
-        <h3>
-          <svg class="about-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          Our Mission
-        </h3>
-        <p>To democratize music by creating a platform that empowers independent artists while providing music enthusiasts with unparalleled access to diverse, authentic content. We're building a community where talent is recognized, creativity is rewarded, and music truly belongs to everybody.</p>
-      </div>
-      
-      <div class="about-item">
-        <h3>
-          <svg class="about-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.5783 8.50903 2.9987 7.05 2.9987C5.59096 2.9987 4.19169 3.5783 3.16 4.61C2.1283 5.6417 1.5487 7.04097 1.5487 8.5C1.5487 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.5C22.4518 7.77752 22.3095 7.06211 22.0329 6.39467C21.7563 5.72723 21.351 5.1208 20.84 4.61V4.61Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          A Platform for Everybody
-        </h3>
-        <p>Whether you're an emerging artist looking for your first audience, an established musician seeking creative freedom, or a music lover hunting for your next favorite song, PuraTunes is designed for you. Our technology ensures fair compensation for artists while keeping music accessible and affordable for everyone.</p>
       </div>
     </div>
   </div>
