@@ -61,11 +61,21 @@
       text-align: left;
     }
     
+    .about-item-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 16px;
+      fill: var(--accent1);
+    }
+    
     .about-item h3 {
       font-size: 24px;
       margin-bottom: 20px;
       font-weight: 600;
       color: var(--accent1);
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
     
     .about-item p {
@@ -87,6 +97,16 @@
     p.lead {
       margin: 0 0 24px;
       color: var(--muted);
+    }
+    
+    .description {
+      margin: 16px 0 32px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.5;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     /* MailerLite form overrides */
@@ -207,6 +227,7 @@
 
   <div class="hero-section">
     <img src="logo.png" alt="PuraTunes Logo" class="logo">
+    <p class="description">Empowering independent artists, labels, venues, and studios with advanced technology, real-time, and monetization tools that complement existing platforms.</p>
     <h1>The Future of Music Belongs to Everybody 🎵</h1>
     <p class="lead">Sign up to get updates on launch, exclusive invites, and early access.</p>
 
@@ -282,17 +303,35 @@
     
     <div class="about-grid">
       <div class="about-item">
-        <h3>Why We Exist</h3>
+        <h3>
+          <svg class="about-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 18V12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12V18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 19C21 20.1046 20.1046 21 19 21H18C16.8954 21 16 20.1046 16 19V16C16 14.8954 16.8954 14 18 14H21V19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 19C3 20.1046 3.89543 21 5 21H6C7.10457 21 8 20.1046 8 19V16C8 14.8954 7.10457 14 6 14H3V19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Why We Exist
+        </h3>
         <p>Music is a universal language that connects us all. Yet, the current music industry often limits access and opportunity for both artists and listeners. We believe everyone deserves a platform where creativity flows freely, where artists can reach their audience directly, and where music lovers can discover authentic sounds without barriers.</p>
       </div>
       
       <div class="about-item">
-        <h3>Our Mission</h3>
+        <h3>
+          <svg class="about-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Our Mission
+        </h3>
         <p>To democratize music by creating a platform that empowers independent artists while providing music enthusiasts with unparalleled access to diverse, authentic content. We're building a community where talent is recognized, creativity is rewarded, and music truly belongs to everybody.</p>
       </div>
       
       <div class="about-item">
-        <h3>A Platform for Everybody</h3>
+        <h3>
+          <svg class="about-item-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.84 4.61C20.3292 4.099 19.7228 3.69364 19.0554 3.41708C18.3879 3.14052 17.6725 2.99817 16.95 2.99817C16.2275 2.99817 15.5121 3.14052 14.8446 3.41708C14.1772 3.69364 13.5708 4.099 13.06 4.61L12 5.67L10.94 4.61C9.9083 3.5783 8.50903 2.9987 7.05 2.9987C5.59096 2.9987 4.19169 3.5783 3.16 4.61C2.1283 5.6417 1.5487 7.04097 1.5487 8.5C1.5487 9.95903 2.1283 11.3583 3.16 12.39L4.22 13.45L12 21.23L19.78 13.45L20.84 12.39C21.351 11.8792 21.7563 11.2728 22.0329 10.6053C22.3095 9.93789 22.4518 9.22248 22.4518 8.5C22.4518 7.77752 22.3095 7.06211 22.0329 6.39467C21.7563 5.72723 21.351 5.1208 20.84 4.61V4.61Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          A Platform for Everybody
+        </h3>
         <p>Whether you're an emerging artist looking for your first audience, an established musician seeking creative freedom, or a music lover hunting for your next favorite song, PuraTunes is designed for you. Our technology ensures fair compensation for artists while keeping music accessible and affordable for everyone.</p>
       </div>
     </div>
