@@ -39,9 +39,10 @@
     }
     
     .about-section {
-      padding: 40px 24px 80px;
-      max-width: 1200px;
+      padding: 60px 24px;
+      max-width: 700px;
       margin: 0 auto;
+      text-align: center;
     }
     
     .about-section h2 {
@@ -50,40 +51,44 @@
       font-weight: 700;
     }
     
-    .about-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 60px;
-      margin-top: 40px;
+    .about-item {
+      margin-bottom: 40px;
     }
     
-    .about-item {
-      text-align: left;
+    .about-item h3 {
+      font-size: 22px;
+      margin-bottom: 16px;
+      font-weight: 600;
+      color: var(--accent1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
     }
     
     .about-item-icon {
       width: 32px;
       height: 32px;
-      margin-right: 12px;
-      vertical-align: middle;
     }
     
-    .about-item h3 {
-      font-size: 24px;
-      margin-bottom: 20px;
-      font-weight: 600;
-      color: var(--accent1);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    
-    .about-item p {
+    .about-item p,
+    .about-item ul {
       font-size: 16px;
       line-height: 1.6;
       color: var(--muted);
-      margin: 0;
+      margin: 0 auto;
+      max-width: 500px;
     }
+    
+    .about-item ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .about-item ul li {
+      margin-bottom: 8px;
+    }
+
     .logo {
       width: 520px;
       max-width: 90%;
@@ -98,11 +103,13 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     h1 {
       font-size: 28px;
       margin: 0 0 24px;
       font-weight: 700;
     }
+
     p.lead {
       margin: 0 0 24px;
       color: var(--muted);
@@ -241,40 +248,41 @@
     <p class="lead">Sign up to get updates on launch, exclusive invites, and early access.</p>
 
     <!-- MailerLite Embed Form -->
-    <!-- (unchanged, leaving as-is) -->
     <div id="mlb2-29646648" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-29646648">
-      <!-- ... your existing MailerLite code ... -->
+      <!-- your MailerLite form block -->
     </div>
   </div>
 
   <div class="about-section">
     <img src="logo.png" alt="PuraTunes Logo" class="about-logo">
     <h2>About PuraTunes</h2>
-    
-    <div class="about-grid">
-      <div class="about-item">
-        <h3>
-          <img src="Assets/headphones-solid.svg" alt="Why We Exist" class="about-item-icon">
-          Why We Exist
-        </h3>
-        <p>Music is a universal language that connects us all. Yet, the current music industry often limits access and opportunity for both artists and listeners. We believe everyone deserves a platform where creativity flows freely, where artists can reach their audience directly, and where music lovers can discover authentic sounds without barriers.</p>
-      </div>
-      
-      <div class="about-item">
-        <h3>
-          <img src="Assets/users-solid-full.svg" alt="Our Mission" class="about-item-icon">
-          Our Mission
-        </h3>
-        <p>To democratize music by creating a platform that empowers independent artists while providing music enthusiasts with unparalleled access to diverse, authentic content. We're building a community where talent is recognized, creativity is rewarded, and music truly belongs to everybody.</p>
-      </div>
-      
-      <div class="about-item">
-        <h3>
-          <img src="Assets/handshake-solid-full.svg" alt="A Platform for Everybody" class="about-item-icon">
-          A Platform for Everybody
-        </h3>
-        <p>Whether you're an emerging artist looking for your first audience, an established musician seeking creative freedom, or a music lover hunting for your next favorite song, PuraTunes is designed for you. Our technology ensures fair compensation for artists while keeping music accessible and affordable for everyone.</p>
-      </div>
+
+    <div class="about-item">
+      <h3>
+        <img src="Assets/headphones-solid.svg" alt="Why We Exist" class="about-item-icon">
+        Why We Exist
+      </h3>
+      <p>The music industry can be challenging for independent artists, and communities are underserved. PuraTunes is here to empower artists and enrich global communities.</p>
+    </div>
+
+    <div class="about-item">
+      <h3>
+        <img src="Assets/users-solid-full.svg" alt="Our Mission" class="about-item-icon">
+        Our Mission
+      </h3>
+      <ul>
+        <li>Enable artists to livestream their music across the world</li>
+        <li>Facilitate creative tools for music-makers</li>
+        <li>Grow a thriving, inclusive community</li>
+      </ul>
+    </div>
+
+    <div class="about-item">
+      <h3>
+        <img src="Assets/handshake-solid-full.svg" alt="A Platform for Everybody" class="about-item-icon">
+        A Platform for Everybody
+      </h3>
+      <p>PuraTunes is committed to supporting artists and advancing social justice. Over time, we hope to build a fairer and more generative ecosystem for all.</p>
     </div>
   </div>
 
@@ -283,3 +291,4 @@
   <script src="https://groot.mailerlite.com/js/w/webforms.min.js" type="text/javascript" async defer></script>
 </body>
 </html>
+
