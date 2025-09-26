@@ -1,295 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PuraTunes – Coming Soon</title>
-
-  <!-- Brand font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-
   <style>
-    :root {
-      --bg: #0c0c34;
-      --text: #e8eaf0;
-      --muted: #a3a6b6;
-      --input-bg: #161a3c;
-      --input-border: #3538a6;
-      --accent1: #9B3AF9;
-      --accent2: #1DA3F3;
+    /* Base styles for body and sections */
+    body { margin: 0; padding: 0; font-family: 'Poppins', sans-serif; color: #1A2145; background: #FFF; }
+    #hero { text-align: center; padding: 60px 20px; }
+    #about { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+    #about h2 { text-align: center; margin-bottom: 40px; }
+
+    /* About sections (icons + text) – responsive three-column layout */
+    .about-section { 
+      width: 30%; display: inline-block; vertical-align: top; margin: 0 2%; 
+      text-align: center; box-sizing: border-box;
     }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      min-height: 100vh;
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Montserrat', sans-serif;
-      text-align: center;
-      padding: 0;
-    }
-    
-    .hero-section {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      padding: 24px;
-    }
-    
-    .about-section {
-      padding: 60px 24px;
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    
-    .about-section h2 {
-      font-size: 36px;
-      margin-bottom: 40px;
-      font-weight: 700;
-    }
-    
-    .about-item {
-      margin-bottom: 40px;
-    }
-    
-    .about-item h3 {
-      font-size: 22px;
-      margin-bottom: 16px;
-      font-weight: 600;
-      color: var(--accent1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-    }
-    
-    .about-item-icon {
-      width: 32px;
-      height: 32px;
-    }
-    
-    .about-item p,
-    .about-item ul {
-      font-size: 16px;
-      line-height: 1.6;
-      color: var(--muted);
-      margin: 0 auto;
-      max-width: 500px;
-    }
-    
-    .about-item ul {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .about-item ul li {
-      margin-bottom: 8px;
+    .about-section img { width: 40px; vertical-align: middle; margin-right: 10px; }
+    .about-section h3 { display: inline-block; color: #4A2FA7; margin: 0 0 15px; }
+    .about-section p { text-align: left; line-height: 1.6; }
+
+    /* Responsive adjustments for about sections on smaller screens */
+    @media (max-width: 768px) {
+      .about-section { width: 100%; margin: 0 0 30px; }
     }
 
-    .logo {
-      width: 520px;
-      max-width: 90%;
-      margin-bottom: 20px;
+    /* MailerLite embed form styles (fonts, loader animation, etc.) */
+    @import url("https://assets.mlcdn.com/fonts.css?version=1677160");
+    .ml-form-embedSubmitLoad { display: inline-block; width: 20px; height: 20px; }
+    .ml-form-embedSubmitLoad:after { 
+      content: ""; display: block; width: 11px; height: 11px; margin: 1px; 
+      border-radius: 50%; border: 4px solid #fff; border-color: #fff #fff #fff transparent; 
+      animation: ml-form-embedSubmitLoad 1.2s linear infinite;
     }
-    
-    .about-logo {
-      width: 260px;
-      max-width: 80%;
-      margin-bottom: 30px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    h1 {
-      font-size: 28px;
-      margin: 0 0 24px;
-      font-weight: 700;
-    }
-
-    p.lead {
-      margin: 0 0 24px;
-      color: var(--muted);
-    }
-    
-    .description {
-      margin: 0 0 32px;
-      color: var(--muted);
-      font-size: 16px;
-      line-height: 1.5;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    /* MailerLite form overrides */
-    #mlb2-29646648 .ml-form-embedWrapper {
-      background: transparent !important;
-      border: none !important;
-      box-shadow: none !important;
-      padding: 0 !important;
-    }
-    #mlb2-29646648 .ml-form-embedContent h4,
-    #mlb2-29646648 .ml-form-embedContent p {
-      color: var(--text) !important;
-      text-align: center !important;
-    }
-    #mlb2-29646648 input[type="email"] {
-      width: 100% !important;
-      background: var(--input-bg) !important;
-      border: 2px solid var(--input-border) !important;
-      border-radius: 10px !important;
-      padding: 14px !important;
-      color: var(--text) !important;
-      font-family: 'Montserrat', sans-serif !important;
-      margin-bottom: 12px;
-    }
-    #mlb2-29646648 .ml-form-checkboxRow {
-      margin: 16px 0 !important;
-      text-align: left !important;
-    }
-    #mlb2-29646648 .ml-form-checkboxRow .checkbox {
-      display: flex !important;
-      align-items: flex-start !important;
-      gap: 8px !important;
-      cursor: pointer !important;
-    }
-    #mlb2-29646648 .ml-form-checkboxRow input[type="checkbox"] {
-      margin: 0 !important;
-      min-width: 16px !important;
-      height: 16px !important;
-      margin-top: 2px !important;
-    }
-    #mlb2-29646648 .ml-form-checkboxRow .label-description p {
-      color: var(--muted) !important;
-      font-size: 13px !important;
-      margin: 0 !important;
-      line-height: 1.4 !important;
-    }
-    #mlb2-29646648 .ml-form-recaptcha {
-      margin: 16px 0 !important;
-      display: flex !important;
-      justify-content: center !important;
-    }
-    #mlb2-29646648 .ml-form-embedSubmit .primary {
-      background: linear-gradient(90deg, var(--accent1), var(--accent2)) !important;
-      border: none !important;
-      border-radius: 10px !important;
-      padding: 14px !important;
-      color: #fff !important;
-      font-weight: 700 !important;
-      font-size: 16px !important;
-      cursor: pointer;
-      width: 100% !important;
-      font-family: 'Montserrat', sans-serif !important;
-    }
-    #mlb2-29646648 .ml-form-embedSubmit .primary:hover {
-      filter: brightness(1.1);
-    }
-    #mlb2-29646648 .ml-form-embedSubmit .loading {
-      background: var(--input-bg) !important;
-      border: 2px solid var(--input-border) !important;
-      border-radius: 10px !important;
-      padding: 14px !important;
-      color: var(--text) !important;
-      width: 100% !important;
-      font-family: 'Montserrat', sans-serif !important;
-      cursor: not-allowed !important;
-    }
-    #mlb2-29646648 .ml-form-embedSubmitLoad {
-      border: 2px solid var(--accent1);
-      border-top: 2px solid transparent;
-      border-radius: 50%;
-      width: 16px;
-      height: 16px;
-      animation: spin 1s linear infinite;
-      display: inline-block;
-      margin-right: 8px;
-    }
-    @keyframes spin {
+    @keyframes ml-form-embedSubmitLoad {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+    .sr-only { 
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; 
+      overflow: hidden; clip: rect(0,0,0,0); border: 0;
+    }
+    /* Adjust reCAPTCHA scaling for mobile */
+    .g-recaptcha { transform: scale(1); transform-origin: 0 0; -webkit-transform: scale(1); -webkit-transform-origin: 0 0; }
 
-    /* Success message styling */
-    #mlb2-29646648 .ml-form-successBody {
-      background: linear-gradient(135deg, var(--accent1), var(--accent2));
-      border-radius: 12px;
-      padding: 24px !important;
-      margin-top: 20px;
-      color: #fff !important;
-      animation: fadeIn 0.8s ease-in-out;
+    /* MailerLite form container and typography */
+    #mlb2-**FORMID**.ml-form-embedContainer {
+      box-sizing: border-box; display: table; margin: 0 auto; position: static; width: 100% !important;
     }
-    #mlb2-29646648 .ml-form-successContent h4 {
-      margin: 0 0 8px;
-      font-size: 24px;
-      font-weight: 700;
+    #mlb2-**FORMID**.ml-form-embedContainer h4,
+    #mlb2-**FORMID**.ml-form-embedContainer p,
+    #mlb2-**FORMID**.ml-form-embedContainer span,
+    #mlb2-**FORMID**.ml-form-embedContainer button {
+      text-transform: none !important; letter-spacing: normal !important;
     }
-    #mlb2-29646648 .ml-form-successContent p {
-      margin: 0;
-      font-size: 16px;
-      font-weight: 500;
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper {
+      background: #FFFFFF; border: 0 solid transparent; border-radius: 4px;
+      display: inline-block !important; margin: 0; padding: 0; position: relative;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.9); }
-      to { opacity: 1; transform: scale(1); }
+    /* Form width settings */
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 400px; }
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 400px; width: 100%; }
+    /* Alignment helpers */
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-align-left { text-align: left; }
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-align-center { text-align: center; }
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-align-right { text-align: right; }
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-align-default { 
+      display: table-cell !important; vertical-align: middle !important; text-align: center !important;
+    }
+    /* Form header image (if any) */
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
+      border-top-left-radius: 4px; border-top-right-radius: 4px; max-width: 100%; height: auto; display: block; margin: 0 auto;
+    }
+    /* Form body and success message padding */
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+      padding: 20px;
+    }
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
+      padding-bottom: 0;
+    }
+    /* Content and success text alignment */
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedContent,
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successContent {
+      text-align: left; margin-bottom: 20px;
+    }
+    /* Heading styles within form content */
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedContent h4,
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successContent h4 {
+      color: #1A2145; font-size: 28px; font-weight: 700; margin: 0 0 10px;
+    }
+    /* Paragraph styles within form content */
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedContent p,
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successContent p {
+      color: #1A2145; font-size: 16px; font-weight: 400; line-height: 1.4; margin: 0 0 10px;
+    }
+    /* Form field group alignment */
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group { text-align: left !important; }
+    /* Hide default labels (we use placeholders instead) */
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group .ml-label { display: none; }
+    /* Email input field style */
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group input[type=email] {
+      width: calc(100% - 110px); display: inline-block; vertical-align: middle;
+      padding: 8px 10px; margin: 0; font-size: 16px; color: #1A2145;
+      border: 1px solid #DCDCDC; border-radius: 4px; box-sizing: border-box;
+    }
+    /* Submit button style */
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group .ml-submit {
+      width: 100px; display: inline-block; vertical-align: middle; text-align: right;
+    }
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group .ml-submit button.primary {
+      background: #4A2FA7; color: #FFF; font-size: 16px; font-weight: 600;
+      border: none; border-radius: 4px; padding: 8px 20px; cursor: pointer;
+    }
+    /* Consent checkbox styling */
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedPermissions .checkbox {
+      text-align: left; margin: 15px 0;
+    }
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedPermissions .checkbox input {
+      margin-right: 5px;
+    }
+    #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedPermissions .checkbox span {
+      font-size: 14px; font-weight: 400; color: #1A2145;
+    }
+    /* Responsive adjustments for form fields on small screens */
+    @media (max-width: 600px) {
+      #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper.embedForm { width: 100% !important; }
+      #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group input[type=email] {
+        width: 100%; display: block; margin-bottom: 10px;
+      }
+      #mlb2-**FORMID**.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group .ml-submit {
+        width: 100%; text-align: center;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="hero-section">
-    <img src="logo.png" alt="PuraTunes Logo" class="logo">
+  <!-- Hero Section -->
+  <section id="hero">
+    <img src="logo.png" alt="PuraTunes Logo" />
     <h1>The Future of Music Belongs to Everybody 🎵</h1>
-    <p class="description">Empowering independent artists, labels, venues, and studios with advanced technology, real-time, and monetization tools that complement existing platforms.</p>
-    <p class="lead">Sign up to get updates on launch, exclusive invites, and early access.</p>
+    <p>Empowering independent artists, labels, venues, and studios with advanced technology, real-time, and monetization tools that complement existing platforms.</p>
+    <p>Sign up to get updates on launch, exclusive invites, and early access.</p>
 
-    <!-- MailerLite Embed Form -->
-    <div id="mlb2-29646648" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-29646648">
-      <!-- your MailerLite form block -->
+    <!-- MailerLite Embedded Signup Form -->
+    <div id="mlb2-**FORMID**" class="ml-form-embedContainer ml-subscribe-form-**FORMID**">
+      <div class="ml-form-embedWrapper embedForm ml-block-form ml-form-embedWrapper">
+        <div class="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
+          <!-- Form Title/Description -->
+          <div class="ml-form-embedContent">
+            <h4>Keep Up To Speed.</h4>
+            <p>Drop us your email and we will keep you posted on updates and launch dates.</p>
+          </div>
+          <!-- Signup Form Fields -->
+          <form class="ml-block-form" action="https://forms.mlsend.com/u**FORMID**/" data-code="**FORMID**" method="post">
+            <div class="ml-field-group">
+              <input type="email" name="fields[email]" placeholder="Email" required />
+            </div>
+            <div class="ml-form-embedPermissions">
+              <label class="checkbox">
+                <input type="checkbox" name="ml-consent" required />
+                <span>Opt in to receive news and updates.</span>
+              </label>
+            </div>
+            <div class="ml-field-group ml-submit">
+              <button type="submit" class="primary">Subscribe</button>
+              <button type="button" class="loading" disabled style="display: none;">
+                <div class="ml-form-embedSubmitLoad"></div>
+                <span class="sr-only">Loading...</span>
+              </button>
+            </div>
+            <input type="hidden" name="ml-submit" value="1" />
+            <input type="hidden" name="anticsrf" value="true" />
+          </form>
+          <!-- Success Message (hidden by default) -->
+          <div class="ml-form-successBody row-success" style="display: none;">
+            <div class="ml-form-successContent">
+              <h4>Thank you!</h4>
+              <p>You have successfully joined our subscriber list.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+    <!-- End MailerLite Form -->
+  </section>
 
-  <div class="about-section">
-    <img src="logo.png" alt="PuraTunes Logo" class="about-logo">
+  <!-- About PuraTunes Section -->
+  <section id="about">
     <h2>About PuraTunes</h2>
-
-    <div class="about-item">
-      <h3>
-        <img src="Assets/headphones-solid-full.svg" alt="Why We Exist" class="about-item-icon">
-        Why We Exist
-      </h3>
-      <p>The music industry can be challenging for independent artists, and communities are underserved. PuraTunes is here to empower artists and enrich global communities.</p>
+    <div class="about-section">
+      <img src="Assets/headphones-solid-full.svg" alt="Why We Exist Icon" />
+      <h3>Why We Exist</h3>
+      <p>Music is a universal language that connects us all. Yet, the current music industry often limits access and opportunity for both artists and listeners. We believe everyone deserves a platform where creativity flows freely, where artists can reach their audience directly, and where music lovers can discover authentic sounds without barriers.</p>
     </div>
-
-    <div class="about-item">
-      <h3>
-        <img src="Assets/users-solid-full.svg" alt="Our Mission" class="about-item-icon">
-        Our Mission
-      </h3>
-      <ul>
-        <li>Enable artists to livestream their music across the world</li>
-        <li>Facilitate creative tools for music-makers</li>
-        <li>Grow a thriving, inclusive community</li>
-      </ul>
+    <div class="about-section">
+      <img src="Assets/handshake-solid-full.svg" alt="Our Mission Icon" />
+      <h3>Our Mission</h3>
+      <p>To democratize music by creating a platform that empowers independent artists while providing music enthusiasts with unparalleled access to diverse, authentic content. We’re building a community where talent is recognized, creativity is rewarded, and music truly belongs to everybody.</p>
     </div>
-
-    <div class="about-item">
-      <h3>
-        <img src="Assets/handshake-solid-full.svg" alt="A Platform for Everybody" class="about-item-icon">
-        A Platform for Everybody
-      </h3>
-      <p>PuraTunes is committed to supporting artists and advancing social justice. Over time, we hope to build a fairer and more generative ecosystem for all.</p>
+    <div class="about-section">
+      <img src="Assets/users-solid-full.svg" alt="A Platform for Everybody Icon" />
+      <h3>A Platform for Everybody</h3>
+      <p>Whether you’re an emerging artist looking for your first audience, an established musician seeking creative freedom, or a music lover hunting for your next favorite song, PuraTunes is designed for you. Our technology ensures fair compensation for artists while keeping music accessible and affordable for everyone.</p>
     </div>
-  </div>
+  </section>
 
-  <!-- MailerLite Scripts -->
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script src="https://groot.mailerlite.com/js/w/webforms.min.js" type="text/javascript" async defer></script>
+  <!-- MailerLite Universal Embed Script (include just before closing </body>) -->
+  <script>
+    (function(m,a,i,l,e,r){ m['MailerLiteObject']=e; function f(){ 
+      var c={ a:arguments, q:[] }; var r=this.push(c); return typeof r != "number" ? r : f.bind(c.q);
+    }
+    f.q = f.q || []; m[e] = m[e] || f.bind(f.q); m[e].q = m[e].q || f.q;
+    r = a.createElement(i); var _ = a.getElementsByTagName(i)[0];
+    r.async = 1; r.src = l + '?v176e10baa5e7ed80d35ae235be3d5024'; _.parentNode.insertBefore(r, _);
+    })(window, document, 'script', 'https://assets.mailerlite.com/js/universal.js', 'ml');
+    ml('account', '9722336', 'e8bXXXXX');  /* Replace e8bXXXXX with the provided account code */
+  </script>
+  <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024" type="text/javascript"></script>
 </body>
 </html>
-
 
