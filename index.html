@@ -80,6 +80,7 @@
     .about-item-icon {
       width: 32px;
       height: 32px;
+      filter: invert(1); /* 👈 make icons white */
     }
     .about-item p,
     .about-item ul {
@@ -95,6 +96,52 @@
     }
     .about-item ul li {
       margin-bottom: 8px;
+    }
+
+    /* ✅ Fix second logo sizing */
+    .about-logo {
+      width: 200px !important;
+      max-width: 60% !important;
+      margin: 0 auto 30px auto !important;
+      display: block;
+    }
+
+    /* ✅ Bigger email input */
+    #mlb2-29646648 input[type="email"] {
+      width: 100% !important;
+      max-width: 400px !important;
+      padding: 16px 14px !important;
+      font-size: 16px !important;
+      border-radius: 8px !important;
+      margin: 10px auto !important;
+      display: block !important;
+    }
+
+    /* ✅ Gradient subscribe button */
+    #mlb2-29646648 button.primary {
+      background: linear-gradient(90deg, #9B3AF9, #1DA3F3) !important;
+      border: none !important;
+      border-radius: 8px !important;
+      color: #fff !important;
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      padding: 14px 24px !important;
+      cursor: pointer !important;
+      transition: opacity 0.2s ease-in-out;
+    }
+    #mlb2-29646648 button.primary:hover {
+      opacity: 0.85;
+    }
+
+    /* ✅ Gradient checkbox + label */
+    #mlb2-29646648 .ml-form-checkboxRow input[type="checkbox"] {
+      accent-color: #9B3AF9; /* fallback */
+    }
+    #mlb2-29646648 .ml-form-checkboxRow .label-description p {
+      background: linear-gradient(90deg, #9B3AF9, #1DA3F3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-weight: 600;
     }
   </style>
 </head>
